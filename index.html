@@ -23,11 +23,12 @@
     <style>
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
         gap: 1rem;
       }
 
-      @media (max-width: 600px) {
+      /* @media (max-width: 600px) {
         .services-grid {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -37,7 +38,7 @@
         .services-grid {
           grid-template-columns: repeat(2, 1fr);
         }
-      }
+      } */
 
       .service-card {
         background: white;
