@@ -10,7 +10,7 @@ h1 {
 
 h1,
 h2 {
-  padding-right: 45px;
+  padding-right: 50px;
   line-height: 105%;
 }
 
@@ -83,6 +83,42 @@ h5 {
   color: #555;
 }
 
+/* service stickers */
+
+.usecase-stickers {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+
+  z-index: -1;
+}
+
+.usecase-sticker {
+  width: 90px;
+  position: absolute;
+  mix-blend-mode: multiply;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.sticker-1 {
+  top: 0.8rem;
+  right: 6%;
+}
+
+.sticker-2 {
+  top: 4.5rem;
+  right: 1.5rem;
+}
+
+.sticker-3 {
+  top: 1.4rem;
+  right: 4.4rem;
+}
+
+/* org avatars */
+
 .avatar-stack {
   display: flex;
   align-items: center;
@@ -124,7 +160,9 @@ h5 {
 
 .org-row a {
   text-decoration: none;
-  color: #965f18;
+  /* color: #965f18; */
+  color: #657b35;
+  font-weight: bold;
 }
 
 .org-row a:hover {

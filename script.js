@@ -1,17 +1,22 @@
 fetch("/data/services.csv")
   .then((res) => res.text())
   .then((text) => {
-    const rows = text.trim().split("\n");
-    const headers = rows[0].split(",").map((h) => h.trim());
+    const parsed = Papa.parse(text, {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: false,
+    });
 
-    const data = rows.slice(1).map((row) => {
-      const values = row.split(",");
+    if (parsed.errors.length) {
+      console.error("CSV parse errors:", parsed.errors);
+    }
+
+    // This is the SAME shape as before
+    const data = parsed.data.map((row) => {
       const obj = {};
-
-      headers.forEach((header, i) => {
-        obj[header] = values[i]?.trim() || "";
+      Object.keys(row).forEach((key) => {
+        obj[key.trim()] = row[key]?.trim?.() ?? row[key];
       });
-
       return obj;
     });
 
@@ -29,6 +34,8 @@ function renderServices(services) {
     card.className = "service-card";
 
     card.innerHTML = `
+      <div class="usecase-stickers" id="stickers-${index}"></div>
+
       <div class="grid-top-block">
         <div class="org-row">
             <div id="${avatarId}" class="avatar-stack"></div>
@@ -57,10 +64,42 @@ function renderServices(services) {
 
     const avatarContainer = document.getElementById(avatarId);
     renderOrgAvatars(service["Organisation(s)"], avatarContainer);
+
+    const stickerContainer = document.getElementById(`stickers-${index}`);
+    renderUseCaseStickers(service["Use Cases"], stickerContainer, 3);
   });
 }
 
 /* ---------- helpers ---------- */
+
+function renderUseCaseStickers(value, container, max = 3) {
+  if (!value || !container) return;
+
+  const cases = value
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean)
+    .slice(0, max);
+
+  // available sticker positions
+  const positions = [1, 2, 3];
+
+  // shuffle positions
+  positions.sort(() => Math.random() - 0.5);
+
+  cases.forEach((useCase, index) => {
+    const img = document.createElement("img");
+
+    img.src = `/img/stickers/${useCase}.png`;
+    img.alt = useCase;
+
+    const position = positions[index];
+
+    img.className = `usecase-sticker sticker-${position}`;
+
+    container.appendChild(img);
+  });
+}
 
 function formatList(value) {
   if (!value) return "—";
