@@ -1,0 +1,35 @@
+Location ID,Location name,Organisation,Community Space,Address,Town,Postcode,Phone,lat,lon
+LOC001,Sunflower House,Sunflower House,TRUE,"Sunflower House, 45 Foord Road",Folkestone,CT19 5AE,,51.08339791,1.178531068
+LOC002,The Community Room,Sunflower House,TRUE,"The Community Room, 19 The Bayle",Folkestone,CT20 1SQ,01303 980 661,51.07952402,1.182911144
+LOC003,Dymchurch Primary School,,FALSE,,,,,,
+LOC004,Rossi Little Library,Little Free Library,TRUE,5 Audley Road,Folkestone,CT20 3QA,,51.08379823,1.153345972
+LOC005,Sandgate Little Free Library,Little Free Library,TRUE,18 Chichester Road,Sandgate,CT203BN,,51.07757698,1.143326097
+LOC006,Folkestone's First Little Free Library,Little Free Library,TRUE,"Folklore, 69 The Old High Street",Folkestone,CT20 1RN,,51.08041918,1.184426133
+LOC007,Cheriton Library,KCC,TRUE,64 Cheriton High Street,Cheriton,CT19 4HB,,51.08821116,1.142383139
+LOC008,Sandgate Library,KCC,TRUE,,,,,,
+LOC009,Wood Avenue Library,KCC,TRUE,,,,,,
+LOC010,Hythe Library,KCC,TRUE,,,,,,
+LOC011,Folkestone Nepalese Community Centre,Folkestone Nepalese Community,TRUE,Baker Road,Cheriton,CT19 4NN,01303 398 055,51.08839732,1.142343423
+LOC012,FNC Community Garden,Folkestone Nepalese Community,TRUE,Pent Farm,Postling,CT21 4EY,,51.1120828,1.057715412
+LOC013,The Message Hub - Tontine Street,Strange Cargo,TRUE,Tontine Street,Folkestone,,,51.08033654,1.185423547
+LOC014,The Message Hub - Black Bull Road,Strange Cargo,TRUE,Black Bull Road,Folkestone,,,51.08924465,1.180820026
+LOC015,Beacon Plus Community Cafe,The Beacon Plus,TRUE,"Our Lady Help of Christians, 41a Guildhall Street",Folkestone,CT20 1EF,,51.0811574,1.178768013
+LOC016,The Beacon Plus College,The Beacon Plus,FALSE,"3rd Floor, Bouverie House Business Centre, 16 Bouverie Place",Folkestone,CT20 1AU,01303395041,51.07862874,1.177721714
+LOC017,Folkestone Electrical Recycling,Go Folkestone,TRUE,"Opposite Boots, 24-26 Sandgate Road",Folkestone,CT20 1DP,,51.07936647,1.179870998
+LOC018,Folkestone Community Fridge,Folkestone Community Fridge,TRUE,180 Dover Road,Folkestone,CT20 1NX,,51.08605075,1.186882217
+LOC019,Hawkinge Community Centre,Hawkinge Community Centre Ltd,TRUE,"Hawkinge Community Centre, Heron Forstal Avenue",Hawkinge,CT18 7FP,,,
+LOC020,Hythe Triangle Community Garden,Hythe Triangle,TRUE,20 St Leonards Rd,Hythe,CT21 6EN,,51.06871391,1.080222491
+LOC021,Digital:Glassworks,Creative Folkestone,FALSE,Mill Bay,Folkestone,CT20 1JR,,51.08137996,1.18258364
+LOC022,Romney Marsh Community Hub,Romney Marsh Community Hub,TRUE,"Sunflower House, Rolfe Lane",New Romney,TN28 8JR,01797 363888,50.98825263,0.938490522
+LOC023,Hub on the Beach,Romney Marsh Community Hub,TRUE,"103 Coast Drive, Greatstone",New Romney,TN28 8NR,,50.97576576,0.9655989533
+LOC024,Romney Marsh Visitor Centre,The Nest Cafe,TRUE,"Romney Marsh Visitor Centre, Dymchurch Road",New Romney,TN28 8AY,01797 369487,50.99653167,0.9590517298
+LOC025,The Life Skills Centre Folkestone,The Life Skills Centre Folkestone Ltd,TRUE,"Channel House, Cobbs Mews",Folkestone,CT20 2SS,,51.07915182,1.172442476
+LOC026,St Eanswythe Primary School,St Eanswythe Primary School,FALSE,Church Street,Folkestone,CT20 1SE,,51.07905853,1.182238271
+LOC027,The Rainbow Centre Folkestone,Rainbow Centre,FALSE,69 Sandgate Road,Folkestone,CT20 2AF,,51.0782749,1.178378734
+LOC028,FoodStop Marine Crescent,Rainbow Centre,TRUE,Marine Crescent,Folkestone,CT20 1PS,,51.07748406,1.182105885
+LOC029,FoodStop Magistrates Court,Rainbow Centre,TRUE,Behind Magistrates Court,Folkestone,CT20 2SG,,51.07900868,1.168826232
+LOC030,Kollectiv,Beton Collective,TRUE,69 The Old High Street,Folkestone,CT20 1RN,01303 760740,51.08045974,1.184446167
+LOC031,Restoration Garden Pent Farm,The Locavore Project,FALSE,"Pent Farm, Postling",Hythe,CT22 4EY,,,
+LOC032,The Urban Room Folkestone,Urban Room Folkestone,TRUE,Harbour Street,Folkestone,CT20 1TP,,,
+LOC033,Touchbase Care,Touchbase Care,FALSE,15-19 Tontine Street,Folkestone,CT20 1JT,01303 211248,,
+LOC034,The Shed Hythe,The Shed Hythe,FALSE,139 High Street,Hythe,CT21 5JL,01303 264794,,
