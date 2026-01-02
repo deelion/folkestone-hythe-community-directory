@@ -39,6 +39,12 @@ h5 {
 
 /* page containers */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .wider-container {
   min-width: min(1200px, 100%);
   margin: 0 auto;
@@ -153,7 +159,7 @@ button {
 /* index */
 
 .index-container {
-  max-width: 700px;
+  max-width: min(700px, 100%);
   margin: 0 auto;
   padding: 1rem;
   display: flex;
@@ -182,7 +188,7 @@ button {
 
 .index-logo {
   font-family: Poppins;
-  font-size: clamp(3rem, 100%, 12rem);
+  font-size: clamp(3rem, 90%, 12rem);
   line-height: 0.9;
   color: #657b35;
   margin-bottom: -0.2rem;
@@ -206,6 +212,7 @@ button {
   margin-top: 150px;
   font-size: 0.9rem;
   color: #777;
+  max-height: 0px;
 }
 
 .actions-box {
@@ -258,15 +265,49 @@ button {
   .index-container {
     padding: 1rem;
   }
-  .logo {
-    font-size: 5rem;
+  .index-logo {
+    font-size: 2rem;
   }
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 /* service grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  width: 70%;
+  gap: 1rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 1rem;
+  border-color: #a0bb64;
+  border-width: 0.25rem;
+  border-style: solid;
+  position: relative;
+  height: 23.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  vertical-align: bottom;
+  z-index: 0;
+}
+
+.service-card h2 {
+  line-height: 1;
+  padding-right: 20px;
+}
+
+.label {
+  font-weight: normal;
+}
+
+.text-bit {
+  padding-bottom: 10px;
+}
 
 .grid-top-block {
   height: 3rem;
@@ -445,41 +486,6 @@ button {
   display: inline-block;
   flex-shrink: 0;
   color: #666;
-}
-
-/* services grid cards */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-  width: 60%;
-  gap: 1rem;
-}
-
-.service-card {
-  background: white;
-  border-radius: 1rem;
-  border-color: #a0bb64;
-  border-width: 0.25rem;
-  border-style: solid;
-  position: relative;
-  height: 20rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  vertical-align: bottom;
-  z-index: 0;
-}
-
-.service-card h2 {
-  line-height: 1;
-  padding-right: 20px;
-}
-
-.label {
-  font-weight: normal;
-}
-
-.text-bit {
-  padding-bottom: 10px;
 }
 
 /* organisations grid cards */
