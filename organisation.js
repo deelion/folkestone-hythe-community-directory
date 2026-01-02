@@ -67,7 +67,7 @@ function renderOrganisation(org) {
 
   const socialLinks =
     igLink || fbLink
-      ? `<div class="social-links">${igLink}${fbLink}</div>`
+      ? `<div class="org-social-links">${igLink}${fbLink}</div>`
       : "";
 
   container.innerHTML = `

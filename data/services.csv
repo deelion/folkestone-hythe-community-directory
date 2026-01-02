@@ -1,42 +1,200 @@
-Service ID,Service,Organisation(s),Location(s),Service Type,Free,URL,Timing notes,OnePlanet Cats,Audience Cats,Use Cases,Basic type,Homeless Only,Disability Only,Children/Parents Only,Members Only,Referrals Only
-SRV001,Folkestone Repair Cafe,Repair Cafe;Sunflower House,Sunflower House,Regular event,TRUE,https://www.repaircafe.org/en/cafe/folkestone-repair-cafe/,Every 2nd Sunday,"Zero waste, No food poverty",All,"save-money, get-involved",Community service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV002,Ukrainian Community School,Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse.org.uk/whats-on,Sunday; Tuesday,Community development,All,,Learning,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV003,HomeStart Family Support,HomeStart;Sunflower House,The Community Room,Regular event,TRUE,,Monday; Tuesday,Emotional wellbeing,Babies/toddlers & parents,direct-support,Support service,FALSE,FALSE,TRUE,FALSE,FALSE
-SRV004,Folke Art,Community Art Kent;Sunflower House,The Community Room,Regular event,TRUE,https://communityartkent.co.uk/folke-art/,Monday; Wednesday,Creative Arts Practice,All,new-hobbies,Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV005,HomeStart Stay & Play,HomeStart,Dymchurch Primary School,Regular event,TRUE,,Tuesday 9-10:30 (Term time only),Emotional wellbeing,Babies/toddlers & parents,direct-support,Support service,FALSE,FALSE,TRUE,FALSE,FALSE
-SRV006,Action on Homelessness Meals Project,Action on Homelessness in Folkestone;Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse-org-uk.stacktemp.com/whats-on,Tuesday; Thursday 12:15-1:30,No food poverty,All adults,direct-support,Food service,TRUE,FALSE,FALSE,FALSE,FALSE
-SRV007,Kent Community Pantry Shopping Club,Kent Community Pantry;Sunflower House,Sunflower House,Regular event,FALSE,https://www.kentcommunitypantry.org/,Friday 9:30-10:30,"No food poverty, Zero waste",All adults,"save-money, spend-local",Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV008,Loose Ends Drop-In Session,Sunflower House,The Community Room,Regular event,TRUE,https://www.communityad.co.uk/exclusives/loose-ends-helping-to-tackle-social-isolation/,Wednesday 1-2:30,"Emotional wellbeing, Community development",All,"meet-people, safe-space",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV009,New Folkestone Society Monthly Coffee Afternoon,New Folkestone Society;Sunflower House,The Community Room,Regular event,TRUE,https://www.newfolkestonesociety.org.uk/events/,Every 2nd Thursday,Community development,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV010,Sunflower Coffee House / Warm Welcome Session,Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse-org-uk.stacktemp.com/whats-on,Friday 9:30-11:30,"Emotional wellbeing, Community development",All,"safe-space, meet-people",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV011,FPAC Theatre Workshop,Folkestone Performing Arts Society;Sunflower House,Sunflower House,Regular event,TRUE,https://www.fpac.info/community-outreach,Every other Friday evening,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV012,Little Library Folkestone,Little Free Library,Rossi Little Library;Sandgate Little Free Library;Folkestone's First Little Free Library,Permanent fixture,TRUE,,,Materials & products,All,free-activities,Book lovers,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV013,Friends of Kingsnorth Gardens,FHDC,Kingsnorth Gardens,Regular event,TRUE,https://www.folkestone-hythe.gov.uk/parks-beaches-open-spaces/kingsnorth-gardens-park,Tuesday 9:30-11,Nourishing land & nature,All adults,"get-outside, get-involved",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV014,Cheriton Litter Pick,Folkestone Nepalese Community;FHDC,Folkestone Nepalese Community Centre,Regular event,TRUE,,Every 2nd Sunday,Nourishing land & nature,All,"get-outside, get-involved",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV015,Warm Safe Hub,Folkestone Nepalese Community;FHDC,Folkestone Nepalese Community Centre,Regular event,TRUE,https://fncuk.org/warm-safe-hub/,Tuesday; Thursday 10-2 (Oct-Mar),"Emotional wellbeing, Community development",All,"safe-space, meet-people",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV016,The Message Hub,Strange Cargo,The Message Hub - Tontine Street;The Message Hub - Black Bull Road,Permanent fixture,TRUE,https://www.strangecargo.org.uk/themessagehubs,,Community development,All,get-involved,Community service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV017,Beacon Plus Community Cafe,The Beacon Plus,Beacon Plus Community Cafe,Permanent fixture,FALSE,https://beacon-plus.org.uk/Beacon-Plus-Community-Caf/,Mon; Tue; Thu; Fri 9:30am-2:30pm,Community development,All,spend-local,Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV018,Includes Us Too Support Services,Includes Us Too,,Direct support,TRUE,https://includesustoo.org.uk/what-we-do/,,"Emotional wellbeing, Community development",All children,direct-support,Support service,FALSE,TRUE,FALSE,FALSE,FALSE
-SRV019,Includes Us Too Lending Library,Includes Us Too,,Direct support,TRUE,https://includesustoo.org.uk/what-we-do/,,Materials & products,All children,"save-money, direct-support",Support service,FALSE,TRUE,FALSE,FALSE,FALSE
-SRV020,Folkestone Wombles Litter Pick,Folkestone Wombles,,Regular event,TRUE,https://www.facebook.com/people/Folkestone-Wombles/61573650717190/,,Nourishing land & nature,All,"get-outside, get-involved",Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV021,Folkestone Electrical Recycling,Go Folkestone,Folkestone Electrical Recycling,Regular event,TRUE,https://www.gofolkestone.org.uk/wp-content/uploads/2024/08/Latest-Folk-Recycling.pdf,Saturdays 10am-2pm,Zero waste,All,,Community service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV022,Folkestone Community Fridge,Folkestone Community Fridge,Folkestone Community Fridge,Permanent fixture,TRUE,https://www.folkestonecommunityfridge.com/,,"No food poverty, Zero waste",All,save-money,Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV023,Hythe Triangle Community Garden,Hythe Triangle,Hythe Triangle Community Garden,Permanent fixture,TRUE,https://hythetriangle.uk/,,Nourishing land & nature,All,,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV024,Folkestone Community Life Drawing,Folkestone Community Life Drawing,Digital:Glassworks,Regular event,TRUE,https://www.eventbrite.co.uk/o/folkestone-community-life-drawing-112243979131,,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV025,New Folkestone Society Coffee Morning,New Folkestone Society Coffee Morning,The Community Room,Regular event,TRUE,https://www.newfolkestonesociety.org.uk/events/,,Community development,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV026,Folkestone Sunday Assembly,Sunday Assembly Folkestone,St Eanswythe Primary School,Regular event,TRUE,https://www.instagram.com/sundayassemblyfolkestone?igsh=aW5lcHcwcDNiZW85,Most months; 1st Sunday 10:45am,Community development,All,"meet-people, free-activities",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV027,Shepway Foodbank,Rainbow Centre;Trussel Trust,,Direct support,TRUE,https://shepway.foodbank.org.uk/,,No food poverty,All,"direct-support, save-money",Food service,FALSE,FALSE,FALSE,FALSE,TRUE
-SRV028,Hythe Pantry,Rainbow Centre;Your Local Pantry,,Regular event,FALSE,https://www.rainbow-centre.org/our-services/pantry/,Weekly,No food poverty,All adults,save-money,Food service,FALSE,FALSE,FALSE,TRUE,FALSE
-SRV029,Homeless Support Service,Rainbow Centre,,Direct support,TRUE,https://www.rainbow-centre.org/our-services/homeless-support-service/,Mon-Fri 10am-1pm,"Safe & comfortable housing for all, No food poverty",All adults,direct-support,Support service,TRUE,FALSE,FALSE,FALSE,FALSE
-SRV030,FoodStop,Rainbow Centre,FoodStop Marine Crescent,Regular event,TRUE,https://www.rainbow-centre.org/our-services/foodstop/,Tue; Thu; Sat 5:20pm,No food poverty,All,direct-support,Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV031,FoodStop,Rainbow Centre,FoodStop Magistrates Court,Regular event,TRUE,https://www.rainbow-centre.org/our-services/foodstop/,Sat 5:00pm,No food poverty,All,direct-support,Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV032,Money First Aid,Rainbow Centre,,Direct support,TRUE,https://www.rainbow-centre.org/our-services/money-matters/,,Safe & equitable place to live & work,All adults,"direct-support, save-money",Support service,FALSE,FALSE,FALSE,FALSE,TRUE
-SRV033,Family Contact Centre,Rainbow Centre,The Rainbow Centre Folkestone,Regular event,FALSE,https://www.rainbow-centre.org/our-services/family-contact-centre/,8:45am-1pm alternate Saturdays,Emotional wellbeing,All adults,direct-support,Support service,FALSE,FALSE,FALSE,FALSE,TRUE
-SRV034,Folkestone Churches Winter Shelter,Rainbow Centre;Churches Together Folkestone,,Seasonal event,TRUE,https://www.rainbow-centre.org/our-services/fcws/,Dec 1 - Feb 28 each year,Safe & comfortable housing for all,All adults,"direct-support, safe-space",Support service,TRUE,FALSE,FALSE,FALSE,FALSE
-SRV035,The Sandcastle Competition,The Church Street Project,Sunny Sands Beach,Seasonal event,FALSE,https://thechurchstreetproject.org/sandcastle-competition,Annual - July,"Creative Arts Practice, Community development, Festivals and events",All,get-outside,Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV036,Online Seed & Plant Swap,Plant it for Free,Online,Permanent fixture,TRUE,https://www.facebook.com/groups/plantitforfree/,,"Nourishing land & nature, Local sustainable & healthy food",All adults,"new-hobbies, locally-grown",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV037,Freecycle Folkestone,Freecycle,Online,Permanent fixture,TRUE,https://www.freecycle.org/town/FolkestoneUK,,Materials & products,All adults,save-money,Community service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV038,Olio Folkestone,Olio,Online,Permanent fixture,TRUE,https://olioapp.com/en/,,"No food poverty, Zero waste",All adults,"save-money, help-others",Food service,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV039,Folkestone Pride,Pride Folkestone,Folkestone Town Centre,Seasonal event,TRUE,https://www.folkestonepride.org/,Annual - July,Festivals and events,All,free-activities,Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE
-SRV040,Touchbase Creative Program,Touchbase Care,Touchbase Care,Regular event,FALSE,https://www.touchbasecare.org/join-us/,Different activities each weekday,Emotional wellbeing,All adults,"direct-support, get-outside, new-hobbies",Support service,FALSE,TRUE,FALSE,TRUE,FALSE
-SRV041,Take Up Space Festival,Folkestone Womens Forum,,Seasonal event,FALSE,https://folkestonewomensforum.com/,,Festivals and events,All,,Entertainment,FALSE,FALSE,FALSE,FALSE,FALSE
+Service ID,Service,Organisation(s),Location(s),Service Type,Free,URL,Timing notes,OnePlanet Cats,Audience Cats,Use Cases,Basic type,Homeless Only,Disability Only,Children/Parents Only,Members Only,Referrals Only,Description
+SRV001,Folkestone Repair Cafe,Repair Cafe;Sunflower House,Sunflower House,Regular event,TRUE,https://www.repaircafe.org/en/cafe/folkestone-repair-cafe/,10:30 - 12:30 Every 2nd Sunday of the month,"Zero waste, No food poverty",All,"save-money, get-involved",Community service,FALSE,FALSE,FALSE,FALSE,FALSE,"Folkestone Repair Cafe at Sunflower House is a real community collective: we are simply a group of people who like preserving special things with sentimental value, avoiding waste, fixing whatever we can fix!
+
+You’ll find a warm welcome with free refreshments, a helpful team of repairers and some useful advice.
+We are also planning a toolkit loan system to help you do stuff at home.
+
+Get in touch if you can help – and we can add you to our listing of good people!"
+SRV002,Ukrainian Community School,Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse.org.uk/whats-on,Sunday; Tuesday,Community development,All,,Learning,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV003,HomeStart Family Support,HomeStart;Sunflower House,The Community Room,Regular event,TRUE,,Monday; Tuesday,Emotional wellbeing,Babies/toddlers & parents,direct-support,Support service,FALSE,FALSE,TRUE,FALSE,FALSE,
+SRV004,Folke Art,Community Art Kent;Sunflower House,The Community Room,Regular event,TRUE,https://communityartkent.co.uk/folke-art/,Monday; Wednesday,Creative Arts Practice,All,new-hobbies,Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE,"Folke Art is an arts and health project in its second year, run by Community Art Kent CIC in partnership with Sunflower House. Folke Art is a free weekly community art class run out of the new Sunflower House community room on the Bayle and is for adults aged 55+.
+
+Folke Art provides a much-needed accessible art classes to adults in Folkestone, providing long term health and wellbeing benefits to those that take part, connecting adults living in Folkestone to artists living and working in the town as well as local creative businesses.  
+
+Folke Art Outcomes for participants:
+
+·        Improved Mental Health
+
+·        Reduction in loneliness
+
+·        Increased sense of belonging
+
+·        Improved access to the arts
+
+·        Learning new skills
+
+Folke Art Aims
+
+·        Provide free art classes to Adults in Folkestone
+
+·        Enable local artists to deliver workshops within the setting
+
+·        Link creatives based around the Creative Quarter to the town
+
+·        Provide supportive art classes that increase wellbeing.
+
+·        Signpost participants to other activities across the town
+
+·        Safeguard adults and provide a safe and supportive creative environment
+
+The Folke Art project is currently open to new participants, if you would like to attend please email communityartkent@gmail.com
+
+Folke Art, Follow on Folke Art and Folke Art CT19 are funded by Kent County Council, NHS Kent & Medway, Folkestone & Hythe District CouncIl, Folkestone Town Council, Skinners Foundation CT, Colyer Ferguson CT, Kent Community Foundation and South Eastern Railway."
+SRV005,HomeStart Stay & Play,HomeStart,Dymchurch Primary School,Regular event,TRUE,,Tuesday 9-10:30 (Term time only),Emotional wellbeing,Babies/toddlers & parents,direct-support,Support service,FALSE,FALSE,TRUE,FALSE,FALSE,
+SRV006,Action on Homelessness Meals Project,Action on Homelessness in Folkestone;Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse-org-uk.stacktemp.com/whats-on,Tuesday; Thursday 12:15-1:30,No food poverty,All adults,direct-support,Food service,TRUE,FALSE,FALSE,FALSE,FALSE,
+SRV007,Kent Community Pantry Shopping Club,Kent Community Pantry;Sunflower House,Sunflower House,Regular event,FALSE,https://www.kentcommunitypantry.org/,Friday 9:30-10:30,"No food poverty, Zero waste",All adults,"save-money, spend-local",Food service,FALSE,FALSE,FALSE,FALSE,FALSE,"Kent Community Pantry is part of the Children and Families charity group.
+
+KCP aims is to make healthy and nutritious food affordable!
+
+Our service will provide you with either 10 or 20 products, depending on the membership type you choose.  We aim to provide you with a wide selection of fresh fruit, veg, bakery products, dairy, meat, hygiene and non-food products subject to availability.
+
+This is an amazing service and membership starts from as little as £17 a month!"
+SRV008,Loose Ends Drop-In Session,Sunflower House,The Community Room,Regular event,TRUE,https://www.communityad.co.uk/exclusives/loose-ends-helping-to-tackle-social-isolation/,Wednesday 1-2:30,"Emotional wellbeing, Community development",All,"meet-people, safe-space",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,"Loose Ends was set up to provide a simple drop-in – the name explains itself well. Visitors vary in age from early twenties through to their eighties. The age-old recipe of chatting with another human being over tea and biscuits is linked with referral to other activities in the Sunflower House portfolio. Our aim is to tackle social isolation in a practical way, advice on tap relating to health and wellbeing, support groups, help and basic hope. Hope is sometimes the difference between survival and tragedy."
+SRV009,New Folkestone Society Monthly Coffee Afternoon,New Folkestone Society;Sunflower House,The Community Room,Regular event,TRUE,https://www.newfolkestonesociety.org.uk/events/,Every 2nd Thursday,Community development,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV010,Sunflower Coffee House / Warm Welcome Session,Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse-org-uk.stacktemp.com/whats-on,Friday 9:30-11:30,"Emotional wellbeing, Community development",All,"safe-space, meet-people",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV011,FPAC Theatre Workshop,Folkestone Performing Arts Society;Sunflower House,Sunflower House,Regular event,TRUE,https://www.fpac.info/community-outreach,Every other Friday evening,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE,"What we do
+
+Foundation acting courses held every other week [No previous experience required]
+
+Focus on wellbeing through creativity
+
+Collaborative and participant-led theatre-making
+
+Inclusive, safe and welcoming
+
+ 
+
+Who are our courses for?
+
+All ages, abilities and backgrounds
+
+No experience necessary
+
+Particularly suited for individuals who have encountered barriers to learning in the past
+
+Anyone interested in wellbeing through participatory theatre
+
+ 
+
+What are the benefits?
+
+Channel or discover your talents and interests
+
+Learn and express yourself in a safe space
+
+Make friends, have fun and try new things
+
+Work together to produce a unique, finished theatre piece at the end of each term
+
+Training in drama skills such as voice, character & text analysis and playwrighting are offered 
+
+Learn employable ‘soft skills’ such as team work, time-management, empathy, problem-solving, verbal and non-verbal communication, fitness, well-being, self-confidence and more
+
+We also look to combat social isolation through these regular creative social gatherings
+
+Inclusive, safe and welcoming
+
+ 
+
+Our sessions are open to people of all ages [18+] and backgrounds, but especially suited to individuals who: 
+
+​
+
+May have experienced barriers to learning in the past
+
+Would benefit from creative expression to support wellbeing
+
+Need a gateway to further training or employment"
+SRV012,Little Library Folkestone,Little Free Library,Rossi Little Library;Sandgate Little Free Library;Folkestone's First Little Free Library;Audley Rd Little Library,Permanent fixture,TRUE,https://littlefreelibrary.org/about/,,Materials & products,All,free-activities,Book lovers,FALSE,FALSE,FALSE,FALSE,FALSE,"Little Free Library's mission is to be a catalyst for building community, inspiring readers, and expanding book access for all through a global network of volunteer-led Little Free Library book-exchange boxes.
+
+There are multiple Little Free Libraries maintained by individuals around Folkestone & Hythe."
+SRV013,Friends of Kingsnorth Gardens,FHDC,Kingsnorth Gardens,Regular event,TRUE,https://www.folkestone-hythe.gov.uk/parks-beaches-open-spaces/kingsnorth-gardens-park,Tuesday 9:30-11,Nourishing land & nature,All adults,"get-outside, get-involved",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,"🍃 Our group of volunteers have been meeting every week since 2023 to enjoy a spot of light garden work – with support from our dedicated grounds maintenance team.
+
+Want to join the crew?
+
+📆 Tuesday mornings
+
+⏰ 9.30am to 11am
+
+📍 Kingsnorth Gardens, Folkestone
+
+It’s a great way to meet new people and spend time in a beautiful community space 😊"
+SRV014,Cheriton Litter Pick,Folkestone Nepalese Community;FHDC,Folkestone Nepalese Community Centre,Regular event,TRUE,https://fncuk.org/fnc-cleaning-activities/,Every 2nd Sunday 10am,Nourishing land & nature,All,"get-outside, get-involved",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,"The Folkestone Nepalese Community (FNC), in partnership with the Folkestone & Hythe District Council, organises a fortnightly community litter picking event to promote a cleaner and greener environment.
+
+🗓 When: Every second Sunday
+
+🕙 Time: 10:00 AM
+
+📍 Location: FNC Centre or a designated local area
+
+This regular initiative brings together volunteers of all ages to support local cleanliness and environmental care. Gloves, bags, and equipment are provided—just bring your enthusiasm!
+
+Join us in making a positive difference in our community!"
+SRV015,Warm Safe Hub,Folkestone Nepalese Community;FHDC,Folkestone Nepalese Community Centre,Regular event,TRUE,https://fncuk.org/warm-safe-hub/,Tuesday; Thursday 10-2 (Oct-Mar),"Emotional wellbeing, Community development",All,"safe-space, meet-people",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,"The Folkestone Nepalese Community (FNC) is proud to deliver the Warm Safe Hub project as part of the UK Shared Prosperity Fund (UKSPF) Community Hub: Cost of Living Support and Warm Space initiative, supported by Folkestone & Hythe District Council.
+
+Our Warm Safe Hub offers a welcoming, comfortable, and inclusive space where residents can come together during the colder months. It’s more than just a warm room — it’s a place to connect, share, relax, and receive support.
+
+Visitors can enjoy refreshments, tea and coffee, warmth, and friendly company, while also accessing practical help such as food and fuel vouchers, warm clothing, and advice on local welfare and wellbeing services.
+
+This project reflects FNC’s ongoing commitment to support community wellbeing, reduce isolation, and help local residents cope with the cost of living pressures across Folkestone and the wider district."
+SRV016,The Message Hub,Strange Cargo,The Message Hub - Tontine Street;The Message Hub - Black Bull Road,Permanent fixture,TRUE,https://www.strangecargo.org.uk/themessagehubs,,Community development,All,get-involved,Community service,FALSE,FALSE,FALSE,FALSE,FALSE,"The Message Hubs were created by Strange Cargo in collaboration with the local community in East Folkestone, creating space at busy intersections for locals to post community notices and event posters, and have since become a well-used community resource."
+SRV017,Beacon Plus Community Cafe,The Beacon Plus,Beacon Plus Community Cafe,Permanent fixture,FALSE,https://beacon-plus.org.uk/Beacon-Plus-Community-Caf/,Mon; Tue; Thu; Fri 9:30am-2:30pm,Community development,All,spend-local,Food service,FALSE,FALSE,FALSE,FALSE,FALSE,"Beacon Plus have a dedicated café which is run by our learners in the centre of Folkestone, giving our learners the opportunity to cook, bake bread and serve customers.  They are also responsible for the business side of the café including profit and loss and purchasing stock.
+
+The café is open to the public and is available for private functions or community groups. Nearly all of the food available is freshly prepared and cooked on the premises.
+
+The café team also hold regular market days at the Bouverie Place Shopping centre in Folkestone where they sell seasonal cakes and bread freshly baked on the day.
+
+You can find us at the church hall at Our Lady Help of Christians, 41a Guildhall Street, Folkestone CT20 1EF
+
+e-mail us at events@beacon-plus.org.uk if you would like to find out more about what we can offer, including catering for external events.
+
+We are open Monday, Tuesday, Thursday and Friday 9.30am-2.30pm."
+SRV018,Includes Us Too Support Services,Includes Us Too,,Direct support,TRUE,https://includesustoo.org.uk/what-we-do/,,"Emotional wellbeing, Community development",All children,direct-support,Support service,FALSE,TRUE,FALSE,FALSE,FALSE,
+SRV019,Includes Us Too Lending Library,Includes Us Too,,Direct support,TRUE,https://includesustoo.org.uk/what-we-do/,,Materials & products,All children,"save-money, direct-support",Support service,FALSE,TRUE,FALSE,FALSE,FALSE,
+SRV020,Folkestone Wombles Litter Pick,Folkestone Wombles,,Regular event,TRUE,https://www.facebook.com/people/Folkestone-Wombles/61573650717190/,,Nourishing land & nature,All,"get-outside, get-involved",Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV021,Folkestone Electrical Recycling,Go Folkestone,Folkestone Electrical Recycling,Regular event,TRUE,https://www.gofolkestone.org.uk/wp-content/uploads/2024/08/Latest-Folk-Recycling.pdf,Saturdays 10am-2pm,Zero waste,All,,Community service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV022,Folkestone Community Fridge,Folkestone Community Fridge,Folkestone Community Fridge,Permanent fixture,TRUE,https://www.folkestonecommunityfridge.com/,,"No food poverty, Zero waste",All,save-money,Food service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV023,Hythe Triangle Community Garden,Hythe Triangle,Hythe Triangle Community Garden,Permanent fixture,TRUE,https://hythetriangle.uk/,,Nourishing land & nature,All,,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV024,Folkestone Community Life Drawing,Folkestone Community Life Drawing,Digital:Glassworks,Regular event,TRUE,https://www.eventbrite.co.uk/o/folkestone-community-life-drawing-112243979131,,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV025,New Folkestone Society Coffee Morning,New Folkestone Society Coffee Morning,The Community Room,Regular event,TRUE,https://www.newfolkestonesociety.org.uk/events/,,Community development,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV026,Folkestone Sunday Assembly,Sunday Assembly Folkestone,St Eanswythe Primary School,Regular event,TRUE,https://www.instagram.com/sundayassemblyfolkestone?igsh=aW5lcHcwcDNiZW85,Most months; 1st Sunday 10:45am,Community development,All,"meet-people, free-activities",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV027,Shepway Foodbank,Rainbow Centre;Trussel Trust,,Direct support,TRUE,https://shepway.foodbank.org.uk/,,No food poverty,All,"direct-support, save-money",Food service,FALSE,FALSE,FALSE,FALSE,TRUE,
+SRV028,Hythe Pantry,Rainbow Centre;Your Local Pantry,,Regular event,FALSE,https://www.rainbow-centre.org/our-services/pantry/,Weekly,No food poverty,All adults,save-money,Food service,FALSE,FALSE,FALSE,TRUE,FALSE,
+SRV029,Homeless Support Service,Rainbow Centre,,Direct support,TRUE,https://www.rainbow-centre.org/our-services/homeless-support-service/,Mon-Fri 10am-1pm,"Safe & comfortable housing for all, No food poverty",All adults,direct-support,Support service,TRUE,FALSE,FALSE,FALSE,FALSE,
+SRV030,FoodStop,Rainbow Centre,FoodStop Marine Crescent,Regular event,TRUE,https://www.rainbow-centre.org/our-services/foodstop/,Tue; Thu; Sat 5:20pm,No food poverty,All,direct-support,Food service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV031,FoodStop,Rainbow Centre,FoodStop Magistrates Court,Regular event,TRUE,https://www.rainbow-centre.org/our-services/foodstop/,Sat 5:00pm,No food poverty,All,direct-support,Food service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV032,Money First Aid,Rainbow Centre,,Direct support,TRUE,https://www.rainbow-centre.org/our-services/money-matters/,,Safe & equitable place to live & work,All adults,"direct-support, save-money",Support service,FALSE,FALSE,FALSE,FALSE,TRUE,
+SRV033,Family Contact Centre,Rainbow Centre,The Rainbow Centre Folkestone,Regular event,FALSE,https://www.rainbow-centre.org/our-services/family-contact-centre/,8:45am-1pm alternate Saturdays,Emotional wellbeing,All adults,direct-support,Support service,FALSE,FALSE,FALSE,FALSE,TRUE,
+SRV034,Folkestone Churches Winter Shelter,Rainbow Centre;Churches Together Folkestone,,Seasonal event,TRUE,https://www.rainbow-centre.org/our-services/fcws/,Dec 1 - Feb 28 each year,Safe & comfortable housing for all,All adults,"direct-support, safe-space",Support service,TRUE,FALSE,FALSE,FALSE,FALSE,
+SRV035,The Sandcastle Competition,The Church Street Project,Sunny Sands Beach,Seasonal event,FALSE,https://thechurchstreetproject.org/sandcastle-competition,Annual - July,"Creative Arts Practice, Community development, Festivals and events",All,get-outside,Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV036,Online Seed & Plant Swap,Plant it for Free,Online,Permanent fixture,TRUE,https://www.facebook.com/groups/plantitforfree/,,"Nourishing land & nature, Local sustainable & healthy food",All adults,"new-hobbies, locally-grown",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV037,Freecycle Folkestone,Freecycle,Online,Permanent fixture,TRUE,https://www.freecycle.org/town/FolkestoneUK,,Materials & products,All adults,save-money,Community service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV038,Olio Folkestone,Olio,Online,Permanent fixture,TRUE,https://olioapp.com/en/,,"No food poverty, Zero waste",All adults,"save-money, help-others",Food service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV039,Folkestone Pride,Pride Folkestone,Folkestone Town Centre,Seasonal event,TRUE,https://www.folkestonepride.org/,Annual - July,Festivals and events,All,free-activities,Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV040,Touchbase Creative Program,Touchbase Care,Touchbase Care,Regular event,FALSE,https://www.touchbasecare.org/join-us/,Different activities each weekday,Emotional wellbeing,All adults,"direct-support, get-outside, new-hobbies",Support service,FALSE,TRUE,FALSE,TRUE,FALSE,
+SRV041,Take Up Space Festival,Folkestone Womens Forum,,Seasonal event,FALSE,https://folkestonewomensforum.com/,,Festivals and events,All,,Entertainment,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV042,Folkestone Repairs Together,Folkestone Repairs Together,Holy Trinity Church Hall,Regular event,TRUE,https://www.facebook.com/people/Folkestone-Repairs-Together/100083422872862/,usually 2nd Sunday of month 12-2,Zero waste,All,save-money,Community service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV043,Wild About Sandgate,Sandgate Environmental Action,Sandgate,Seasonal event,TRUE,https://www.sandgateenvironmentalaction.co.uk/our-projects,,Nourishing land & nature,All,get-outside,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV044,Sandgate Community Litter Picking,Sandgate Environmental Action,Sandgate Library,Permanent fixture,TRUE,https://www.sandgateenvironmentalaction.co.uk/our-projects,,Nourishing land & nature,All,get-outside,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV045,Sandgate Bee Walks,Sandgate Environmental Action,Sandgate,Regular event,TRUE,https://www.sandgateenvironmentalaction.co.uk/our-projects,,Nourishing land & nature,All,get-outside,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV046,Hawkinge Community Fridge,Folkestone Community Fridge,Hawkinge Community Centre,Regular event,TRUE,https://folkestonecommunityfridge.com/6/,2nd Sunday 11-1,No food poverty,All,save-money,Food service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV047,Charivari Day,Strange Cargo,Folkestone Town Centre,Seasonal event,TRUE,https://www.strangecargo.org.uk/,Annual - summer,Festivals and events,All,free-activities,Outdoor activities,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV048,Walk and Talk,Folkestone Fellas,,Regular event,TRUE,https://folkestonefellas.com/,Monthly - usually last weekend,Emotional wellbeing,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV049,Tool Library,Folkeshare,,Permanent fixture,FALSE,https://folkeshare.org.uk/,coming soon,Materials & products,All adults,save-money,Community service,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV050,Photography workshops,Folkeshare,,Regular event,FALSE,https://folkeshare.org.uk/,coming soon,Creative Arts Practice,All adults,new-hobbies,Learning,FALSE,FALSE,FALSE,FALSE,FALSE,
+SRV051,Go Folkestone Members Meetings,Go Folkestone,,Regular event,TRUE,https://gofolkestone.org.uk/projects/,,Community development,All adults,get-involved,Community organising,FALSE,FALSE,FALSE,FALSE,FALSE,"Go Folkestone isn’t just about preserving the past. It’s about building a future – stronger, greener, and more connected – for everyone who loves this town."
+SRV052,Green Gang Tree Planting,Go Folkestone,,Regular event,TRUE,https://gofolkestone.org.uk/projects/,,Nourishing land & nature,All,get-outside,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,"Our Green Gang continues to lead environmental projects that make Folkestone cleaner, greener, and more welcoming. From tree planting to litter-picking, their work is a simple but powerful way of showing what can be achieved when people come together with pride in their town. These activities improve everyday spaces, protect our environment, and build a sense of community ownership."
+SRV053,Green Gang Litter Pick,Go Folkestone,,Regular event,TRUE,https://gofolkestone.org.uk/projects/,,Nourishing land & nature,All,get-outside,Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,"Our Green Gang continues to lead environmental projects that make Folkestone cleaner, greener, and more welcoming. From tree planting to litter-picking, their work is a simple but powerful way of showing what can be achieved when people come together with pride in their town. These activities improve everyday spaces, protect our environment, and build a sense of community ownership."
+SRV054,Folkestone Safe Haven,Mental Health Matters,Folkestone Safe Haven,Permanent fixture,TRUE,https://www.mhm.org.uk/folkestone-safe-haven,Monday - Sunday 6pm-11pm,Emotional wellbeing,All adults,"safe-space, direct-support",Support service,FALSE,FALSE,FALSE,FALSE,FALSE,"Are you feeling distressed, frightened, overwhelmed, or that things are too much for you? Don’t know where to turn to get mental health support? Are your usual sources of support closed for the night?
+
+Folkestone Safe Haven offers out-of-hours mental health support to anyone aged 18+ in the Kent area.
+
+This is a walk-in service - there's no need to be referred by your GP or Care Coordinator. The Folkestone Safe Haven offers a welcoming, safe, comfortable, non-judgmental and non-clinical environment, sometimes known as 'crisis cafes'. At the safe haven, we will be able to provide information and emotional support if you are in crisis or feel you are heading towards a crisis situation."
+SRV055,Wellbeing Check-In,South Kent Mind,,Permanent fixture,TRUE,https://southkentmind.org.uk/book-a-wellbeing-check-in,,Emotional wellbeing,All adults,direct-support,Support service,FALSE,FALSE,FALSE,FALSE,FALSE,"To get involved in South Kent Mind’s activities and services, you will be required to complete a wellbeing check-in with a member of our Wellbeing Team.
+
+These are a 50-minute discussion on how you are currently coping with your mental health and what support would be best for you.
+
+Once a wellbeing check-in has been completed, you will be registered with South Kent Mind and will be able to participate in our activities and services. Wellbeing check-ins are available by contacting us via any of the following ways:"
+SRV056,Folkestone Men's Shed,Folkestone Mens Shed;Age UK,Age UK Folkestone - The Marigold Centre,Permanent fixture,TRUE,https://www.facebook.com/folkestonemensshed/,,"Emotional wellbeing, Nourishing land & nature",Retired,"meet-people, new-hobbies",Nature & garden,FALSE,FALSE,FALSE,FALSE,FALSE,"Space for men 55+ to
+come together, to meet, share skills
+and put the world to rights over a brew"

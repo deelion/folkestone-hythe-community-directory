@@ -10,7 +10,7 @@ h1 {
 
 h1,
 h2 {
-  padding-right: 50px;
+  /* padding-right: 50px; */
   line-height: 105%;
 }
 
@@ -24,9 +24,6 @@ h2 a {
 
 h2 a {
   font-size: 28px;
-}
-
-h2 a {
   color: #1d2d1d;
   text-decoration: none;
 }
@@ -37,6 +34,33 @@ h2 a:hover {
 
 h5 {
   font-size: x-small;
+}
+
+/* page containers */
+
+.wider-container {
+  min-width: min(700px, 100%);
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* space between sections */
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space between sections */
+}
+
+.container > * {
+  width: 100%; /* force children full width */
 }
 
 .logo {
@@ -51,6 +75,141 @@ h5 {
   padding-left: 3px;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+/* button */
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #657b35;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* index */
+
+.index-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* space between sections */
+}
+
+.first-impression {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  text-align: center;
+  gap: 0.5rem; /* spacing between header, actions, etc. */
+  background-color: #f5f5f5; /* optional */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+.landing-header {
+  text-align: center;
+}
+
+.index-logo {
+  font-size: 12rem;
+  line-height: 0.9;
+  color: #657b35;
+  margin-bottom: -0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 3px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  letter-spacing: -0.1rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-family: Poppins;
+  margin: 0px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.index-note {
+  margin-top: 150px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.actions-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+.main-buttons {
+  padding-top: 10px;
+}
+
+.search-placeholder {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.search-placeholder input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Why section */
+.why-box {
+  width: 100%;
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-box h2 {
+  margin-bottom: 1rem;
+  color: #657b35;
+}
+
+.why-box p {
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .index-container {
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
 /* navigation */
@@ -118,17 +277,17 @@ h5 {
 
 .sticker-1 {
   top: 0.8rem;
-  right: 6%;
+  right: 0rem;
 }
 
 .sticker-2 {
-  top: 4.5rem;
-  right: 1.5rem;
+  top: 4.7rem;
+  right: 0.7rem;
 }
 
 .sticker-3 {
-  top: 1.4rem;
-  right: 4.4rem;
+  top: 1.8rem;
+  right: 3.9rem;
 }
 
 /* org avatars */
@@ -164,6 +323,8 @@ h5 {
   object-fit: cover;
 }
 
+/* services page org section */
+
 .org-row {
   display: flex;
   align-items: center;
@@ -189,10 +350,180 @@ h5 {
   font-size: 0.85rem;
 }
 
+/* individual service org section */
+
+.srv-org-grid {
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2rem;
+}
+
+.srv-org-card {
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.org-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #1d1d1d;
+  background: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem;
+  overflow: hidden;
+}
+
+.org-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.org-name {
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.org-card:hover .org-name {
+  text-decoration: underline;
+}
+
+.org-card:hover .org-avatar {
+  border: 2px solid #657b35;
+}
+
 .inline-icon {
   width: 14px;
   height: 14px;
   display: inline-block;
   flex-shrink: 0;
   color: #666;
+}
+
+/* services grid cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 1rem;
+  border-color: #a0bb64;
+  border-width: 0.25rem;
+  border-style: solid;
+  position: relative;
+  height: 20rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  vertical-align: bottom;
+  z-index: 0;
+}
+
+.service-card h2 {
+  line-height: 1;
+  padding-right: 20px;
+}
+
+.label {
+  font-weight: normal;
+}
+
+.text-bit {
+  padding-bottom: 10px;
+}
+
+/* organisations grid cards */
+.orgs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.orgs-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.orgs-card h2 {
+  margin: 6 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.orgs-social-links {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.orgs-social-links a {
+  width: 24px;
+  height: 24px;
+  color: #444;
+}
+
+.orgs-social-links a:hover {
+  color: #0077cc;
+}
+
+/* individual service page */
+.ind-service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.service-link {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* individual org page */
+.org-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 700px;
+  min-width: min(700px, 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.org-social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.org-social-links a {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  color: #333;
+}
+
+.org-social-links a:hover {
+  color: #0077cc;
+}
+
+#services li a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#services li a:hover {
+  text-decoration: underline;
 }

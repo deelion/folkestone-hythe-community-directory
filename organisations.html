@@ -21,54 +21,22 @@
 
     <link href="style.css" , rel="stylesheet" />
 
-    <style>
-      .org-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1rem;
-      }
-
-      .org-card {
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
-
-      .org-card h2 {
-        margin: 6 0 0.5rem;
-        font-size: 1.1rem;
-      }
-
-      .social-links {
-        margin-top: 0.75rem;
-        display: flex;
-        gap: 0.75rem;
-      }
-
-      .social-links a {
-        width: 24px;
-        height: 24px;
-        color: #444;
-      }
-
-      .social-links a:hover {
-        color: #0077cc;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <nav class="main-nav">
-      <a href="/" class="logo">Directory</a>
+      <a href="/" class="logo">goodneighbours</a>
 
       <div class="nav-links">
         <a href="/services.html" class="nav-link">Services</a>
         <a href="/organisations.html" class="nav-link">Organisations</a>
       </div>
     </nav>
-    <h1>Community Organisations</h1>
+    <div class="wider-container">
+      <h1>Community organisations</h1>
 
-    <div id="organisations" class="org-grid"></div>
+      <div id="organisations" class="orgs-grid"></div>
+    </div>
 
     <script src="organisations.js"></script>
   </body>

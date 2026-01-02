@@ -60,11 +60,11 @@ function renderOrganisations(orgs) {
 
     const socialLinks =
       ig || fb || website
-        ? `<div class="social-links">${ig}${fb}${website}</div>`
+        ? `<div class="orgs-social-links">${ig}${fb}${website}</div>`
         : "";
 
     const card = document.createElement("div");
-    card.className = "org-card";
+    card.className = "orgs-card";
 
     card.innerHTML = `
       <h2>

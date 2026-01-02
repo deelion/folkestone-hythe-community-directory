@@ -20,39 +20,7 @@
     />
     <link href="/style.css" , rel="stylesheet" />
 
-    <style>
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-        gap: 1rem;
-      }
-
-      .service-card {
-        background: white;
-        border-radius: 1rem;
-        border-color: #a0bb64;
-        border-width: 0.25rem;
-        border-style: solid;
-        position: relative;
-        height: 20rem;
-        padding: 1.5rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        vertical-align: bottom;
-        z-index: 0;
-      }
-
-      .service-card h2 {
-        line-height: 1;
-      }
-
-      .label {
-        font-weight: normal;
-      }
-
-      .text-bit {
-        padding-bottom: 10px;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <nav class="main-nav">
@@ -63,9 +31,11 @@
         <a href="/organisations.html" class="nav-link">Organisations</a>
       </div>
     </nav>
-    <h1>Community services</h1>
+    <div class="wider-container">
+      <h1>Community services</h1>
 
-    <div id="services" class="services-grid"></div>
+      <div id="services" class="services-grid"></div>
+    </div>
 
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="services.js"></script>
