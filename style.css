@@ -39,6 +39,20 @@ h5 {
   font-size: x-small;
 }
 
+.logo {
+  font-family: Poppins;
+  font-weight: 700;
+  text-decoration: none;
+  color: #657b35;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 3px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 /* navigation */
 
 .nav-link {

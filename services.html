@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Folkestone & Hythe Community - Organisations</title>
+    <title>Our Services</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap"
@@ -18,58 +18,56 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <link href="style.css" , rel="stylesheet" />
+    <link href="/style.css" , rel="stylesheet" />
 
     <style>
-      .org-grid {
+      .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
         gap: 1rem;
       }
 
-      .org-card {
+      .service-card {
         background: white;
-        padding: 1rem;
-        border-radius: 8px;
+        border-radius: 1rem;
+        border-color: #a0bb64;
+        border-width: 0.25rem;
+        border-style: solid;
+        position: relative;
+        height: 20rem;
+        padding: 1.5rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        vertical-align: bottom;
+        z-index: 0;
       }
 
-      .org-card h2 {
-        margin: 6 0 0.5rem;
-        font-size: 1.1rem;
+      .service-card h2 {
+        line-height: 1;
       }
 
-      .social-links {
-        margin-top: 0.75rem;
-        display: flex;
-        gap: 0.75rem;
+      .label {
+        font-weight: normal;
       }
 
-      .social-links a {
-        width: 24px;
-        height: 24px;
-        color: #444;
-      }
-
-      .social-links a:hover {
-        color: #0077cc;
+      .text-bit {
+        padding-bottom: 10px;
       }
     </style>
   </head>
   <body>
     <nav class="main-nav">
-      <a href="/" class="logo">Directory</a>
+      <a href="/" class="logo">goodneighbours</a>
 
       <div class="nav-links">
         <a href="/services.html" class="nav-link">Services</a>
         <a href="/organisations.html" class="nav-link">Organisations</a>
       </div>
     </nav>
-    <h1>Community Organisations</h1>
+    <h1>Community services</h1>
 
-    <div id="organisations" class="org-grid"></div>
+    <div id="services" class="services-grid"></div>
 
-    <script src="organisations.js"></script>
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="services.js"></script>
   </body>
 </html>
