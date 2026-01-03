@@ -25,17 +25,45 @@ fetch("/data/services.csv")
     renderServices(matchingServices);
   });
 
-/* ---------- helpers ---------- */
-
 function parseCSV(text) {
-  const rows = text.trim().split("\n");
-  const headers = rows[0].split(",").map((h) => h.trim());
+  const rows = [];
+  let currentRow = [];
+  let currentValue = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const nextChar = text[i + 1];
+
+    if (char === '"' && nextChar === '"') {
+      // Escaped quote
+      currentValue += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      currentRow.push(currentValue);
+      currentValue = "";
+    } else if (char === "\n" && !inQuotes) {
+      currentRow.push(currentValue);
+      rows.push(currentRow);
+      currentRow = [];
+      currentValue = "";
+    } else {
+      currentValue += char;
+    }
+  }
+
+  // Push last value
+  currentRow.push(currentValue);
+  rows.push(currentRow);
+
+  const headers = rows[0].map((h) => h.trim());
 
   return rows.slice(1).map((row) => {
-    const values = row.split(",");
     const obj = {};
-    headers.forEach((h, i) => {
-      obj[h] = values[i]?.trim() || "";
+    headers.forEach((header, i) => {
+      obj[header] = row[i]?.trim() || "";
     });
     return obj;
   });
@@ -49,11 +77,35 @@ function renderOrganisation(org) {
     return;
   }
 
+  container.innerHTML = `
+  <div class="ind-org-page">
+  ${renderOrgHeader(org)}
+
+  <div class="org-card">
+      ${renderOrgActions(org)}<br>
+      ${org["Description"]}
+    </div>
+  </div>
+    
+  `;
+}
+
+/* ---------- helpers ---------- */
+
+function renderOrgHeader(org) {
+  const website = org["Org Website"]
+    ? `<a href="${
+        org["Org Website"]
+      }" target="_blank" rel="noopener" aria-label="Website">
+           <span class="icon">${websiteIcon()}</span>
+         </a>`
+    : "";
+
   const igLink = org["IG URL"]
     ? `<a href="${
         org["IG URL"]
       }" target="_blank" rel="noopener" aria-label="Instagram">
-         ${instagramIcon()}
+         <span class="icon">${instagramIcon()}</span>
        </a>`
     : "";
 
@@ -61,60 +113,327 @@ function renderOrganisation(org) {
     ? `<a href="${
         org["FB URL"]
       }" target="_blank" rel="noopener" aria-label="Facebook">
-         ${facebookIcon()}
+         <span class="icon">${facebookIcon()}</span>
        </a>`
     : "";
 
   const socialLinks =
-    igLink || fbLink
-      ? `<div class="org-social-links">${igLink}${fbLink}</div>`
+    website || igLink || fbLink
+      ? `<div class="org-social-links">${website}${igLink}${fbLink}</div>`
       : "";
 
-  container.innerHTML = `
-    <div class="org-card">
-      <h1>${org["Organisation"]}</h1>
-      <h5>${org["Org Type"]}</h5>
-      <p><strong>Operates in:</strong> ${org["Operation Area"]}</p>
+  return `
+    <section class="ind-org-header">
+      ${renderOrgAvatar(org["Organisation"])}
 
-      <p>
-        <a href="${org["Org Website"]}" target="_blank" rel="noopener">
-          Visit website
-        </a>
-      </p>
+      <div class="ind-org-header-details">
+        <h1 class="ind-org-name">${org["Organisation"]}</h1>
 
-      ${socialLinks}
+        ${
+          org["Org Type"]
+            ? `<span class="ind-org-type-pill">${org["Org Type"]}</span>`
+            : ""
+        }
+
+        ${socialLinks}
+
+        
+      </div>
+    </section>
+  `;
+}
+
+function renderOrgAvatar(orgName) {
+  const safeName = orgName.replace(/\s+/g, "-").toLowerCase();
+  const imgPath = `/img/${orgName}.jpg`;
+
+  return `
+    <div class="ind-org-avatar">
+      <img
+        src="${imgPath}"
+        alt="${orgName}"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="ind-org-avatar-fallback">
+        ${getInitials(orgName)}
+      </div>
     </div>
   `;
 }
 
+function renderOrgActions(org) {
+  let buttons = "";
+
+  if (org["Volunteer URL"]) {
+    buttons += `
+      <a href="${org["Volunteer URL"]}" target="_blank" rel="noopener">
+        <button class="ind-org-action-btn">Volunteer</button>
+      </a>
+    `;
+  }
+
+  if (org["Donate URL"]) {
+    buttons += `
+      <a href="${org["Donate URL"]}" target="_blank" rel="noopener">
+        <button class="ind-org-action-btn secondary">Donate</button>
+      </a>
+    `;
+  }
+
+  return buttons ? `<div class="ind-org-actions">${buttons}</div>` : "";
+}
+
+function getInitials(name) {
+  return name
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
 function instagramIcon() {
   return `
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 1.8a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4zM17.8 6.2a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-    </svg>
+    <i class="fa-brands fa-instagram"></i>
   `;
 }
 
 function facebookIcon() {
   return `
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4v1.7H16l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
+    <i class="fa-brands fa-facebook"></i>
+
+  `;
+}
+
+function websiteIcon() {
+  return `
+    <i class="fa-solid fa-globe"></i>
+  `;
+}
+
+// function renderServices(services) {
+//   const list = document.getElementById("services");
+
+//   if (services.length === 0) {
+//     list.innerHTML = "<li>No services listed.</li>";
+//     return;
+//   }
+
+//   services.forEach((service) => {
+//     const li = document.createElement("li");
+//     const encodedService = encodeURIComponent(service["Service"]);
+//     li.innerHTML = `<a href="/service.html?service=${encodedService}">${service["Service"]}</a>`;
+//     list.appendChild(li);
+//   });
+// }
+
+/* test */
+
+function renderServices(services) {
+  const container = document.getElementById("services");
+
+  services.forEach((service, index) => {
+    const card = document.createElement("div");
+    const encodedService = encodeURIComponent(service["Service"]);
+    const avatarId = `avatars-${index}`;
+
+    card.className = "ind-org-service-card";
+
+    card.innerHTML = `
+      <div class="ind-org-service-title">
+        <h2>
+          <span>
+            <a href="/service.html?service=${encodedService}">
+              ${service["Service"]}
+            </a>
+          </span>
+        </h2>
+      </div>
+
+      <div class="ind-org-service-location">
+        <p class="label">
+          ${formatListSummary(service["Location(s)"])}
+        </p>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+/* ---------- helpers ---------- */
+
+function renderUseCaseStickers(value, container, max = 3) {
+  if (!value || !container) return;
+
+  const cases = value
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean)
+    .slice(0, max);
+
+  // available sticker positions
+  const positions = [1, 2, 3];
+
+  // shuffle positions
+  positions.sort(() => Math.random() - 0.5);
+
+  cases.forEach((useCase, index) => {
+    const img = document.createElement("img");
+
+    img.src = `/img/stickers/${useCase}.png`;
+    img.alt = useCase;
+
+    const position = positions[index];
+
+    img.className = `usecase-sticker sticker-${position}`;
+
+    container.appendChild(img);
+  });
+}
+
+function formatList(value) {
+  if (!value) return "—";
+
+  return value
+    .split(";")
+    .map((item) => item.trim())
+    .join("<br />");
+}
+
+function formatListSummary(value) {
+  if (!value) return "—";
+
+  const items = value
+    .split(";")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (items.length === 0) return "—";
+
+  const first = items[0];
+  const remaining = items.length - 1;
+
+  const text =
+    remaining > 0
+      ? `${first} <span class="item-count">+${remaining}</span>`
+      : first;
+
+  return `
+    <span class="inline-list">
+      ${locationIcon()}
+      <span class="text-bit">${text}</span>
+    </span>
+  `;
+}
+
+function formatOrganisationLinks(value) {
+  if (!value) return "—";
+
+  return value
+    .split(";")
+    .map((org) => {
+      const name = org.trim();
+      const encoded = encodeURIComponent(name);
+      return `<a href="/organisation.html?org=${encoded}">${name}</a>`;
+    })
+    .join("<br />");
+}
+
+function formatOrganisationImages(value) {
+  if (!value) return "—";
+
+  return value
+    .split(";")
+    .map((org) => {
+      const name = org.trim();
+      return `<span><img src = "/img/${name}.jpg" class = "pp"></span>`;
+    })
+    .join("");
+}
+
+function renderOrgAvatars(orgList, container) {
+  container.innerHTML = "";
+
+  const orgs = orgList
+    ?.split(";")
+    .map((o) => o.trim())
+    .filter(Boolean);
+
+  if (!orgs || orgs.length === 0) return;
+
+  orgs.forEach((orgName) => {
+    const avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.title = orgName;
+
+    const img = new Image();
+    const safeName = orgName.replace(/\s+/g, "-").toLowerCase();
+    img.src = `/img/${orgName}.jpg`;
+    img.alt = orgName;
+
+    img.onload = () => {
+      avatar.appendChild(img);
+    };
+
+    img.onerror = () => {
+      avatar.textContent = getInitials(orgName);
+    };
+
+    container.appendChild(avatar);
+  });
+}
+
+function getInitials(name) {
+  return name
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function formatOrgSummary(value) {
+  const orgs = parseOrgList(value);
+
+  if (orgs.length === 0) return "—";
+
+  const firstOrg = orgs[0];
+  const remaining = orgs.length - 1;
+
+  let summary = `
+    <a href="/organisation.html?org=${encodeURIComponent(firstOrg)}">
+      ${firstOrg}
+    </a>
+  `;
+
+  if (remaining > 0) {
+    summary += ` <span class="org-count">+${remaining}</span>`;
+  }
+
+  return summary;
+}
+
+function parseOrgList(value) {
+  return (
+    value
+      ?.split(";")
+      .map((o) => o.trim())
+      .filter(Boolean) || []
+  );
+}
+
+function locationIcon() {
+  return `
+    <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
     </svg>
   `;
 }
 
-function renderServices(services) {
-  const list = document.getElementById("services");
-
-  if (services.length === 0) {
-    list.innerHTML = "<li>No services listed.</li>";
-    return;
+const links = document.querySelectorAll(".nav-link");
+links.forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
   }
-
-  services.forEach((service) => {
-    const li = document.createElement("li");
-    const encodedService = encodeURIComponent(service["Service"]);
-    li.innerHTML = `<a href="/service.html?service=${encodedService}">${service["Service"]}</a>`;
-    list.appendChild(li);
-  });
-}
+});

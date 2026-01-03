@@ -66,19 +66,19 @@ function renderService(service) {
     <div class="ind-service-card">
       <h1>${service["Service"]}</h1>
 
+      ${formatLocationList(service["Location(s)"])}
+
+      <div class="inline-list">
+          ${calendarIcon()}
+          <span class="text-bit">${formatList(service["Timing notes"])}</span>
+        </div>
+
       <h4>Organisers</h4>
       <div class="srv-org-grid" id="srv-org-grid"></div>
 
       <div class="service-description">
       ${formatDescription(service["Description"])}
       </div>
-
-      <p>
-        <span class="label">Location(s):</span>
-        ${formatList(service["Location(s)"])}<br>
-        <span class="label">Details:</span>
-        ${formatList(service["Timing notes"])}
-      </p>
 
       ${renderServiceURL(service["URL"])}
 
@@ -96,6 +96,49 @@ function renderService(service) {
 }
 
 /* ---------- helpers ---------- */
+
+function calendarIcon() {
+  return `
+    <svg
+      class="inline-icon"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1zm12 8H5v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9zM5 8h14V7a1 1 0 0 0-1-1h-1v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6H5a1 1 0 0 0-1 1v1z"/>
+    </svg>
+  `;
+}
+
+function formatLocationList(value) {
+  if (!value) return "—";
+
+  const items = value
+    .split(";")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (items.length === 0) return "—";
+
+  return items
+    .map(
+      (item) => `
+        <div class="inline-list">
+          ${locationIcon()}
+          <span class="text-bit">${item}</span>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function locationIcon() {
+  return `
+    <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+    </svg>
+  `;
+}
 
 function formatDescription(text) {
   if (!text) return "";
