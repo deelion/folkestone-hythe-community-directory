@@ -114,18 +114,6 @@ h5 {
   color: white;
 }
 
-.logo {
-  height: 100%;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 0.9;
-  color: white;
-  margin-bottom: -0.2rem;
-  padding-left: 3px;
-  white-space: nowrap;
-  text-decoration: none;
-}
-
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -140,6 +128,15 @@ h5 {
 .nav-link.active {
   font-weight: 700;
   color: #f5ffe2;
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 1rem;
+  }
+  .nav-links {
+    gap: 0.7rem;
+  }
 }
 
 /* button */
@@ -261,15 +258,18 @@ button {
   color: #555;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .index-container {
     padding: 1rem;
   }
   .index-logo {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .index-note {
+    font-size: 0.7rem;
   }
 }
 
@@ -333,6 +333,12 @@ button {
   font-weight: bold;
   font-size: 13px;
   color: #555;
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    width: 80%;
+  }
 }
 
 /* service stickers */
@@ -489,9 +495,10 @@ button {
 }
 
 /* organisations grid cards */
+
 .orgs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   width: 50%;
   gap: 1rem;
 }
@@ -522,6 +529,12 @@ button {
 
 .orgs-social-links a:hover {
   color: #0077cc;
+}
+
+@media (max-width: 600px) {
+  .orgs-grid {
+    width: 80%;
+  }
 }
 
 /* individual service page */
