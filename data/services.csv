@@ -52,7 +52,7 @@ This is an amazing service and membership starts from as little as £17 a month!
 SRV008,Loose Ends Drop-In Session,Sunflower House,The Community Room,Regular event,TRUE,https://www.communityad.co.uk/exclusives/loose-ends-helping-to-tackle-social-isolation/,1pm-2:30pm on Wednesdays,"Emotional wellbeing, Community development",All,"meet-people, safe-space",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,"Loose Ends was set up to provide a simple drop-in – the name explains itself well. Visitors vary in age from early twenties through to their eighties. The age-old recipe of chatting with another human being over tea and biscuits is linked with referral to other activities in the Sunflower House portfolio. Our aim is to tackle social isolation in a practical way, advice on tap relating to health and wellbeing, support groups, help and basic hope. Hope is sometimes the difference between survival and tragedy."
 SRV009,New Folkestone Society Monthly Coffee Afternoon,New Folkestone Society;Sunflower House,The Community Room,Regular event,TRUE,https://www.newfolkestonesociety.org.uk/events/,Every 2nd Thursday of the month,Community development,All adults,meet-people,Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
 SRV010,Sunflower Coffee House / Warm Welcome Session,Sunflower House,Sunflower House,Regular event,TRUE,https://sunflowerhouse-org-uk.stacktemp.com/whats-on,9:30am-11:30am on Fridays,"Emotional wellbeing, Community development",All,"safe-space, meet-people",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,
-SRV011,FPAC Theatre Workshop,Folkestone Performing Arts Society;Sunflower House,Sunflower House,Regular event,TRUE,https://www.fpac.info/community-outreach,Every other Friday evening,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE,"What we do
+SRV011,FPAC Theatre Workshop,Folkestone Performing Arts Company;Sunflower House,Sunflower House,Regular event,TRUE,https://www.fpac.info/community-outreach,Every other Friday evening,Creative Arts Practice,All adults,"new-hobbies, free-activities",Creative activities,FALSE,FALSE,FALSE,FALSE,FALSE,"What we do
 
 Foundation acting courses held every other week [No previous experience required]
 
@@ -73,38 +73,7 @@ No experience necessary
 Particularly suited for individuals who have encountered barriers to learning in the past
 
 Anyone interested in wellbeing through participatory theatre
-
- 
-
-What are the benefits?
-
-Channel or discover your talents and interests
-
-Learn and express yourself in a safe space
-
-Make friends, have fun and try new things
-
-Work together to produce a unique, finished theatre piece at the end of each term
-
-Training in drama skills such as voice, character & text analysis and playwrighting are offered 
-
-Learn employable ‘soft skills’ such as team work, time-management, empathy, problem-solving, verbal and non-verbal communication, fitness, well-being, self-confidence and more
-
-We also look to combat social isolation through these regular creative social gatherings
-
-Inclusive, safe and welcoming
-
- 
-
-Our sessions are open to people of all ages [18+] and backgrounds, but especially suited to individuals who: 
-
-​
-
-May have experienced barriers to learning in the past
-
-Would benefit from creative expression to support wellbeing
-
-Need a gateway to further training or employment"
+"
 SRV012,Little Library Folkestone,Little Free Library,Rossi Little Library;Sandgate Little Free Library;Folkestone's First Little Free Library;Audley Rd Little Library,Permanent fixture,TRUE,https://littlefreelibrary.org/about/,Any time,Materials & products,All,free-activities,Book lovers,FALSE,FALSE,FALSE,FALSE,FALSE,"Little Free Library's mission is to be a catalyst for building community, inspiring readers, and expanding book access for all through a global network of volunteer-led Little Free Library book-exchange boxes.
 
 There are multiple Little Free Libraries maintained by individuals around Folkestone & Hythe."
@@ -259,3 +228,5 @@ SRV065,BeYou LGBTQ+ 1-to-1 Support,Porchlight;NHS,,Permanent fixture,TRUE,https:
 Everyone, at times, can find things a little challenging and difficult to manage. You may want to chat with an experienced LGBTQ+ youth support worker.
 
 Sessions are between 30 mins to 1 hour, we do what works for you. They may take place at a youth centre, online or in the community."
+SRV066,Folkestone Womens Forum,Folkestone Womens Forum,,Regular event,TRUE,https://folkestonewomensforum.com/folkestone-womens-forum,Contact organisation for details,Community development,All adults,"meet-people, get-involved",Tea & talk,FALSE,FALSE,FALSE,FALSE,FALSE,"Folkestone Women’s Forum is a feminist organization with community, collaboration, and connection at its core. We hold discussions of our interests, work, passions, and experiences. We also support and publicize other events under the FWF umbrella – meet-ups, book discussions, walks, games nights, meals – and encourage you to get involved in organizing these."
+SRV067,DadSpace Mental Health Support Group,DadSpace,,Regular event,TRUE,https://www.dadspace.co.uk/dadspace-folkestone,Check org sites for upcoming dates,"Emotional wellbeing, Community development",All adults,"direct-support, meet-people",Support service,FALSE,FALSE,TRUE,FALSE,FALSE,"To provide a safe space for dads to talk, listen and share their experiences of fatherhood."
