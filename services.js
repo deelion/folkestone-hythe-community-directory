@@ -11,13 +11,20 @@ fetch("/data/services.csv")
       console.error("CSV parse errors:", parsed.errors);
     }
 
-    // This is the SAME shape as before
     const data = parsed.data.map((row) => {
       const obj = {};
       Object.keys(row).forEach((key) => {
         obj[key.trim()] = row[key]?.trim?.() ?? row[key];
       });
       return obj;
+    });
+
+    data.sort((a, b) => {
+      const nameA = a["Service"].toLowerCase();
+      const nameB = b["Service"].toLowerCase();
+      if (nameA < nameB) return -1;
+      if (nameA > nameB) return 1;
+      return 0;
     });
 
     renderServices(data);
