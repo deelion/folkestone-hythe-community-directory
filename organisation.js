@@ -1,13 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 const orgName = params.get("org");
 
-// Load org info
+let allOrganisations = [];
+
 fetch("/data/organisations.csv")
   .then((res) => res.text())
   .then((text) => {
-    const orgs = parseCSV(text);
-    const org = orgs.find((o) => o["Organisation"] === orgName);
-    renderOrganisation(org);
+    allOrganisations = parseCSV(text);
+    const org = allOrganisations.find((o) => o["Organisation"] === orgName);
+    renderOrganisation(org, allOrganisations);
   });
 
 // Load services for this org
@@ -22,7 +23,14 @@ fetch("/data/services.csv")
       return orgs?.includes(orgName);
     });
 
-    renderServices(matchingServices);
+    if (matchingServices.length > 0) {
+      renderServices(matchingServices);
+    } else {
+      const section = document.getElementById("ind-org-service-title");
+      if (section) {
+        section.remove();
+      }
+    }
   });
 
 function parseCSV(text) {
@@ -86,11 +94,74 @@ function renderOrganisation(org) {
       ${org["Description"]}
     </div>
   </div>
-    
+
+          <div id="parent-org-section"></div>
+
   `;
+
+  if (org["Parent"]) {
+    const parentSection = document.getElementById("parent-org-section");
+
+    parentSection.innerHTML = `
+    <h4 class="parent-org-heading">Parent organisation(s)</h4>
+    <div class="srv-org-grid" id="parent-org-grid"></div>
+  `;
+
+    const parentGrid = document.getElementById("parent-org-grid");
+
+    // Reuse your existing card renderer
+    renderOrganisationCards(org["Parent"], parentGrid);
+  }
 }
 
 /* ---------- helpers ---------- */
+
+function renderOrganisationCards(value, container) {
+  if (!value || !container) return;
+
+  const orgs = value
+    .split(";")
+    .map((o) => o.trim())
+    .filter(Boolean);
+
+  orgs.forEach((orgName) => {
+    const encoded = encodeURIComponent(orgName);
+
+    const card = document.createElement("a");
+    card.href = `/organisation.html?org=${encoded}`;
+    card.className = "srv-org-card";
+    card.setAttribute("aria-label", orgName);
+
+    const avatar = document.createElement("div");
+    avatar.className = "org-avatar";
+
+    const img = new Image();
+    img.src = `/img/${orgName}.jpg`;
+    img.alt = orgName;
+
+    img.onload = () => avatar.appendChild(img);
+    img.onerror = () => {
+      avatar.textContent = getInitials(orgName);
+    };
+
+    const name = document.createElement("div");
+    name.className = "org-name";
+    name.textContent = orgName;
+
+    card.appendChild(avatar);
+    card.appendChild(name);
+    container.appendChild(card);
+  });
+}
+
+function getInitials(name) {
+  return name
+    .split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 function renderOrgHeader(org) {
   const website = org["Org Website"]
@@ -136,7 +207,6 @@ function renderOrgHeader(org) {
         }
 
         ${socialLinks}
-
         
       </div>
     </section>
@@ -211,25 +281,9 @@ function websiteIcon() {
   `;
 }
 
-// function renderServices(services) {
-//   const list = document.getElementById("services");
-
-//   if (services.length === 0) {
-//     list.innerHTML = "<li>No services listed.</li>";
-//     return;
-//   }
-
-//   services.forEach((service) => {
-//     const li = document.createElement("li");
-//     const encodedService = encodeURIComponent(service["Service"]);
-//     li.innerHTML = `<a href="/service.html?service=${encodedService}">${service["Service"]}</a>`;
-//     list.appendChild(li);
-//   });
-// }
-
-/* test */
-
 function renderServices(services) {
+  if (!services || services.length === 0) return;
+
   const container = document.getElementById("services");
 
   services.forEach((service, index) => {
