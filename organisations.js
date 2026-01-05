@@ -15,14 +15,44 @@ fetch("/data/organisations.csv")
   });
 
 function parseCSV(text) {
-  const rows = text.trim().split("\n");
-  const headers = rows[0].split(",").map((h) => h.trim());
+  const rows = [];
+  let currentRow = [];
+  let currentValue = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const nextChar = text[i + 1];
+
+    if (char === '"' && nextChar === '"') {
+      // Escaped quote
+      currentValue += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      currentRow.push(currentValue);
+      currentValue = "";
+    } else if (char === "\n" && !inQuotes) {
+      currentRow.push(currentValue);
+      rows.push(currentRow);
+      currentRow = [];
+      currentValue = "";
+    } else {
+      currentValue += char;
+    }
+  }
+
+  // Push last value
+  currentRow.push(currentValue);
+  rows.push(currentRow);
+
+  const headers = rows[0].map((h) => h.trim());
 
   return rows.slice(1).map((row) => {
-    const values = row.split(",");
     const obj = {};
-    headers.forEach((h, i) => {
-      obj[h] = values[i]?.trim() || "";
+    headers.forEach((header, i) => {
+      obj[header] = row[i]?.trim() || "";
     });
     return obj;
   });
