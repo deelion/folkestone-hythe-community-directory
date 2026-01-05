@@ -68,29 +68,29 @@ function renderOrganisations(orgs) {
       ? `<a href="${
           org["Org Website"]
         }" target="_blank" rel="noopener" aria-label="Website">
-           ${websiteIcon()}
+           <span class="icon">${websiteIcon()}</span>
          </a>`
       : "";
 
-    const ig = org["IG URL"]
+    const igLink = org["IG URL"]
       ? `<a href="${
           org["IG URL"]
         }" target="_blank" rel="noopener" aria-label="Instagram">
-           ${instagramIcon()}
-         </a>`
+         <span class="icon">${instagramIcon()}</span>
+       </a>`
       : "";
 
-    const fb = org["FB URL"]
+    const fbLink = org["FB URL"]
       ? `<a href="${
           org["FB URL"]
         }" target="_blank" rel="noopener" aria-label="Facebook">
-           ${facebookIcon()}
-         </a>`
+         <span class="icon">${facebookIcon()}</span>
+       </a>`
       : "";
 
     const socialLinks =
-      ig || fb || website
-        ? `<div class="orgs-social-links">${ig}${fb}${website}</div>`
+      website || igLink || fbLink
+        ? `<div class="org-social-links">${website}${igLink}${fbLink}</div>`
         : "";
 
     const card = document.createElement("div");
@@ -103,7 +103,11 @@ function renderOrganisations(orgs) {
         </a>
       </h2>
 
-      <h5>${org["Org Type"]}</h5>
+      ${
+        org["Org Type"]
+          ? `<span class="ind-org-type-pill">${org["Org Type"]}</span>`
+          : ""
+      }
 
       ${socialLinks}
     `;
@@ -116,28 +120,20 @@ function renderOrganisations(orgs) {
 
 function instagramIcon() {
   return `
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 1.8a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4z"/>
-    </svg>
+    <i class="fa-brands fa-instagram"></i>
   `;
 }
 
 function facebookIcon() {
   return `
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4v1.7H16l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
-    </svg>
+    <i class="fa-brands fa-facebook"></i>
+
   `;
 }
 
 function websiteIcon() {
   return `
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
-               10-4.48 10-10S17.52 2 12 2zm0 18
-               c-4.41 0-8-3.59-8-8s3.59-8 8-8
-               8 3.59 8 8-3.59 8-8 8zm1-13h-2v2h2V7zm0 4h-2v6h2v-6z"/>
-    </svg>
+    <i class="fa-solid fa-globe"></i>
   `;
 }
 
