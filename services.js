@@ -19,7 +19,9 @@ fetch("/data/services.csv")
       return obj;
     });
 
-    data.sort((a, b) => {
+    const filtered = filterServicesByUseCase(data);
+
+    filtered.sort((a, b) => {
       const nameA = a["Service"].toLowerCase();
       const nameB = b["Service"].toLowerCase();
       if (nameA < nameB) return -1;
@@ -27,7 +29,7 @@ fetch("/data/services.csv")
       return 0;
     });
 
-    renderServices(data);
+    renderServices(filtered);
   });
 
 function renderServices(services) {

@@ -60,7 +60,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* space between sections */
+  gap: 1rem;
 }
 
 .container {
@@ -71,11 +71,11 @@ h5 {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* space between sections */
+  gap: 1rem;
 }
 
 .container > * {
-  width: 100%; /* force children full width */
+  width: 100%;
 }
 
 .logo {
@@ -96,22 +96,22 @@ h5 {
 
 .main-nav {
   width: 100%;
-  height: 64px; /* standard header height */
-  background: #657b35;
+  height: 64px;
+  background: #fff;
   border-bottom: 1px solid #657b35;
-  position: sticky; /* optional */
+  position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .nav-inner {
-  max-width: 1200px; /* or match your site width */
+  max-width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-
+  background: #657b35;
   display: flex;
-  align-items: center; /* vertical centering */
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -159,6 +159,10 @@ button {
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
+}
+
+.atoz {
+  width: 35vw;
 }
 
 /* icons */
@@ -254,6 +258,10 @@ i {
 
 .main-buttons {
   padding-top: 10px;
+  width: 100%;
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
 }
 
 .search-placeholder {
@@ -720,4 +728,119 @@ i {
   .ind-org-name {
     font-size: 25px;
   }
+}
+
+/* filters */
+
+/* Homepage-specific version inside .index-filter */
+.filter-panel {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+index-filter .filter-panel {
+  padding: 3rem;
+  margin: 1rem 0;
+}
+
+.filter-panel h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+}
+
+.filter-panel small {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-buttons {
+  scrollbar-width: none; /* Firefox */
+}
+
+.filter-buttons {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+.index-filter .filter-buttons {
+  all: unset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.index-filter .filter-buttons {
+  justify-content: center;
+}
+
+.filter-buttons button {
+  padding: 0.2rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.filter-buttons button:hover {
+  background: #a0bb64;
+  color: #000;
+}
+
+.filter-buttons button.active {
+  background-color: #657b35;
+  color: #fff;
+  border-color: #657b35;
+  font-weight: 600;
+}
+
+/* #clear-filters {
+  background-color: #666;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.clear-filters:hover {
+  background: #ddd;
+} */
+
+.index-filter .filter-panel #clear-filters {
+  all: unset;
+  font-size: 0;
+  height: 0;
+}
+
+.filter-buttons .filter-clear {
+  font-weight: 400;
+  color: #fff;
+  background-color: #1d1d1d;
+  border-style: dashed;
 }

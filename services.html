@@ -65,6 +65,7 @@
         </div>
       </div>
     </nav>
+
     <!-- <nav class="main-nav">
       <a href="/" class="logo">goodneighbours</a>
 
@@ -73,12 +74,28 @@
         <a href="/organisations.html" class="nav-link">Organisations</a>
       </div>
     </nav> -->
+
     <div class="wider-container">
       <h1>Community services</h1>
+      <div id="filter-panel" class="filter-panel">
+        <div class="filter-buttons">
+          <button class="filter-clear" id="clear-filters" type="button">
+            View all
+          </button>
+        </div>
+      </div>
+      <div class="index-counts">
+        <p>
+          Explore <strong id="service-count">0</strong> local community services
+        </p>
+      </div>
 
       <div id="services" class="services-grid"></div>
     </div>
 
+    <script src="/filters.js"></script>
+    <script src="/filters-ui.js"></script>
+    <script src="/counts.js"></script>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="services.js"></script>
   </body>

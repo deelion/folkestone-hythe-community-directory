@@ -61,23 +61,38 @@
         <header class="landing-header">
           <h1 class="index-logo">goodneighbours</h1>
           <p class="subtitle">Folkestone & Hythe</p>
-          <br />
+
           <p class="tagline">
             Find services and organisations in our community, run by our
             neighbours.
           </p>
-
           <!-- Actions box -->
           <section class="actions-box">
             <div class="main-buttons">
               <a href="/organisations.html"
-                ><button>Organisations A-Z</button></a
+                ><button class="atoz">Organisations A-Z</button></a
               ><br /><br /><a href="/services.html"
-                ><button>Services A-Z</button></a
+                ><button class="atoz">Services A-Z</button></a
               >
             </div>
           </section>
         </header>
+
+        <!-- <div class="index-counts">
+          <p>
+            <strong id="service-count">0</strong> services ·
+            <strong id="organisation-count">0</strong> organisations
+          </p>
+        </div> -->
+
+        <div class="index-filter">
+          <div id="filter-panel" class="filter-panel">
+            <h4>What do you want to do?</h4>
+            <!-- <p>or find something specific, if you want to...</p> -->
+            <div class="filter-buttons"></div>
+            <button id="clear-filters" class="clear-btn">Clear filters</button>
+          </div>
+        </div>
 
         <p class="index-note">
           <b>Please note:</b> This site is currently run by one person,
@@ -99,6 +114,9 @@
         </p>
       </section>
     </div>
-    <script src="script.js"></script>
+
+    <script src="/filters.js"></script>
+    <script src="/filters-ui.js"></script>
+    <script src="counts.js"></script>
   </body>
 </html>
