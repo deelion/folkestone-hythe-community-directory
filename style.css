@@ -162,7 +162,9 @@ button {
 }
 
 .atoz {
+  padding: 0.5rem 0.5rem;
   width: 35vw;
+  max-width: 320px;
 }
 
 /* icons */
@@ -257,7 +259,7 @@ i {
 }
 
 .main-buttons {
-  padding-top: 10px;
+  padding-top: 0px;
   width: 100%;
   display: flex;
   gap: 0.4rem;
