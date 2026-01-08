@@ -3,6 +3,10 @@ fetch("/data/organisations.csv")
   .then((text) => {
     let organisations = parseCSV(text);
 
+    organisations = organisations.filter(
+      (org) => org["Operation Area"]?.trim().toLowerCase() !== "national"
+    );
+
     organisations.sort((a, b) => {
       const nameA = a["Organisation"].toLowerCase();
       const nameB = b["Organisation"].toLowerCase();
