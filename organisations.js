@@ -176,14 +176,6 @@ function renderOrganisations(orgs, serviceCountMap) {
   });
 }
 
-/*
-service${
-            serviceCount !== 1 ? "s" : ""
-          } listed
-           */
-
-/* ➜ */
-
 /* ---------- helpers ---------- */
 
 function instagramIcon() {
