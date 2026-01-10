@@ -39,6 +39,7 @@ function renderServices(services) {
     const card = document.createElement("div");
     const encodedService = encodeURIComponent(service["Service"]);
     const avatarId = `avatars-${index}`;
+    const serviceUrl = `/service.html?service=${encodedService}`;
 
     card.className = "service-card";
 
@@ -76,6 +77,20 @@ function renderServices(services) {
 
     const stickerContainer = document.getElementById(`stickers-${index}`);
     renderUseCaseStickers(service["Use Cases"], stickerContainer, 3);
+
+    card.addEventListener("click", () => {
+      window.location.href = serviceUrl;
+    });
+
+    card.setAttribute("role", "link");
+    card.setAttribute("tabindex", "0");
+
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        window.location.href = serviceUrl;
+      }
+    });
   });
 }
 

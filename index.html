@@ -115,6 +115,10 @@
       </section>
     </div>
 
+    <script>
+      // reset filters
+      localStorage.setItem("activeFilters", JSON.stringify({ useCases: [] }));
+    </script>
     <script src="/filters.js"></script>
     <script src="/filters-ui.js"></script>
     <script src="counts.js"></script>
