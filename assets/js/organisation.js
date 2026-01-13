@@ -136,7 +136,7 @@ function renderOrganisationCards(value, container) {
     avatar.className = "org-avatar";
 
     const img = new Image();
-    img.src = `/img/${orgName}.jpg`;
+    img.src = `/assets/img/org-pp/${orgName}.jpg`;
     img.alt = orgName;
 
     img.onload = () => avatar.appendChild(img);
@@ -215,7 +215,7 @@ function renderOrgHeader(org) {
 
 function renderOrgAvatar(orgName) {
   const safeName = orgName.replace(/\s+/g, "-").toLowerCase();
-  const imgPath = `/img/${orgName}.jpg`;
+  const imgPath = `/assets/img/org-pp/${orgName}.jpg`;
 
   return `
     <div class="ind-org-avatar">
@@ -335,7 +335,7 @@ function renderUseCaseStickers(value, container, max = 3) {
   cases.forEach((useCase, index) => {
     const img = document.createElement("img");
 
-    img.src = `/img/stickers/${useCase}.png`;
+    img.src = `/assets/img/stickers/${useCase}.png`;
     img.alt = useCase;
 
     const position = positions[index];
@@ -401,7 +401,7 @@ function formatOrganisationImages(value) {
     .split(";")
     .map((org) => {
       const name = org.trim();
-      return `<span><img src = "/img/${name}.jpg" class = "pp"></span>`;
+      return `<span><img src = "/assets/img/org-pp/${name}.jpg" class = "pp"></span>`;
     })
     .join("");
 }
@@ -423,7 +423,7 @@ function renderOrgAvatars(orgList, container) {
 
     const img = new Image();
     const safeName = orgName.replace(/\s+/g, "-").toLowerCase();
-    img.src = `/img/${orgName}.jpg`;
+    img.src = `/assets/img/org-pp/${orgName}.jpg`;
     img.alt = orgName;
 
     img.onload = () => {

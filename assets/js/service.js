@@ -186,7 +186,7 @@ function renderOrganisationCards(value, container) {
     avatar.className = "org-avatar";
 
     const img = new Image();
-    img.src = `/img/${orgName}.jpg`;
+    img.src = `/assets/img/org-pp/${orgName}.jpg`;
     img.alt = orgName;
 
     img.onload = () => avatar.appendChild(img);
