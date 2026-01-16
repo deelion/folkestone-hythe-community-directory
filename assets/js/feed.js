@@ -8,7 +8,7 @@ fetch(FEED_URL)
     const parser = new DOMParser();
     const xml = parser.parseFromString(xmlText, "text/xml");
 
-    const items = Array.from(xml.getElementsByTagName("item")).slice(0, 1);
+    const items = Array.from(xml.getElementsByTagName("item")).slice(0, 25);
     const list = document.getElementById("feed");
 
     items.forEach((item) => {
