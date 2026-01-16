@@ -35,9 +35,8 @@ export default async () => {
   });
 
   // 1. Load organisations CSV
-  const orgCSV = fs.readFileSync(
-    path.join(process.cwd(), "data/organisations.csv"),
-    "utf-8"
+  const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
+    res.text()
   );
 
   const organisations = parseCSV(orgCSV);
