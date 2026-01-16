@@ -1,0 +1,27 @@
+{
+  "name": "folkestone-hythe-community-directory",
+  "version": "1.0.0",
+  "description": "Creating a space to highlight the work and available services of local community groups, charities, community interest companies, and other community-focused businesses in the Folkestone & Hythe district.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deelion/folkestone-hythe-community-directory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deelion/folkestone-hythe-community-directory/issues"
+  },
+  "homepage": "https://github.com/deelion/folkestone-hythe-community-directory#readme",
+  "dependencies": {
+    "rss": "^1.2.2",
+    "rss-parser": "^3.13.0"
+  }
+}
