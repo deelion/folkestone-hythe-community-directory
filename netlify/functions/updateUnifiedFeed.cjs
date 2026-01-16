@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {
 
   const parser = new Parser({
     headers: { "User-Agent": "Mozilla/5.0 (compatible; NetlifyRSS/1.0)" },
-    customFields: { item: ["content:encoded"] },
+    // customFields: { item: ["content:encoded"] },
   });
 
   const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
@@ -33,10 +33,8 @@ exports.handler = async function (event, context) {
           link: item.link,
           date: item.isoDate || item.pubDate,
           description:
-            item["content:encoded"] ||
-            item.contentSnippet ||
-            item.content ||
-            "",
+            // item["content:encoded"] ||
+            item.contentSnippet || item.content || "",
           organisation: source.name,
         });
       });
