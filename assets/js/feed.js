@@ -1,7 +1,8 @@
 const loading = document.getElementById("loading");
 
 // !! remove full path when tested
-const FEED_URL = "/community-feed.xml";
+const FEED_URL =
+  "https://folkestonehythecommunitydirectory.netlify.app/.netlify/functions/updateUnifiedFeed";
 
 fetch(FEED_URL)
   .then((res) => res.text())
