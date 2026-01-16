@@ -18,6 +18,8 @@
 
 import Parser from "rss-parser";
 import RSS from "rss";
+import fs from "fs";
+import path from "path";
 
 export const config = {
   schedule: "0 */1 * * *", // every 1 hours
@@ -27,11 +29,15 @@ export default async () => {
   const siteURL = process.env.URL;
   const parser = new Parser({
     headers: { "User-Agent": "Mozilla/5.0 (compatible; NetlifyRSS/1.0)" },
+    customFields: {
+      item: ["content:encoded"],
+    },
   });
 
   // 1. Load organisations CSV
-  const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
-    res.text()
+  const orgCSV = fs.readFileSync(
+    path.join(process.cwd(), "data/organisations.csv"),
+    "utf-8"
   );
 
   const organisations = parseCSV(orgCSV);
@@ -92,12 +98,14 @@ export default async () => {
 
   const xml = feed.xml({ indent: true });
 
-  return new Response(xml, {
+  return {
+    statusCode: 200,
     headers: {
       "Content-Type": "application/rss+xml",
       "Cache-Control": "public, max-age=3600",
     },
-  });
+    body: xml,
+  };
 };
 
 function parseCSV(text) {
