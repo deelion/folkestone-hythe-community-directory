@@ -1,8 +1,7 @@
 const loading = document.getElementById("loading");
 
 // !! remove full path when tested
-const FEED_URL =
-  "https://folkestonehythecommunitydirectory.netlify.app/.netlify/functions/updateUnifiedFeed";
+const FEED_URL = "/.netlify/functions/updateUnifiedFeed";
 
 fetch(FEED_URL)
   .then((res) => res.text())
@@ -37,4 +36,7 @@ fetch(FEED_URL)
   .catch((err) => {
     console.error("Failed to load feed", err);
     loading.textContent = "Failed to load updates.";
+  })
+  .finally(() => {
+    loading.style.display = "none";
   });
