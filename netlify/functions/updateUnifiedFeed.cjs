@@ -79,5 +79,45 @@ exports.handler = async function (event, context) {
 };
 
 function parseCSV(text) {
-  // same CSV parsing code
+  const rows = [];
+  let currentRow = [];
+  let currentValue = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const nextChar = text[i + 1];
+
+    if (char === '"' && nextChar === '"') {
+      // Escaped quote
+      currentValue += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === "," && !inQuotes) {
+      currentRow.push(currentValue);
+      currentValue = "";
+    } else if (char === "\n" && !inQuotes) {
+      currentRow.push(currentValue);
+      rows.push(currentRow);
+      currentRow = [];
+      currentValue = "";
+    } else {
+      currentValue += char;
+    }
+  }
+
+  // Push last value
+  currentRow.push(currentValue);
+  rows.push(currentRow);
+
+  const headers = rows[0].map((h) => h.trim());
+
+  return rows.slice(1).map((row) => {
+    const obj = {};
+    headers.forEach((header, i) => {
+      obj[header] = row[i]?.trim() || "";
+    });
+    return obj;
+  });
 }
