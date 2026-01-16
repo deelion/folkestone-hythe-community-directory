@@ -1,67 +1,42 @@
-// testing
-// export const config = {
-//   schedule: "0 */3 * * *", // every 3 hours
-// };
-
-// export default async () => {
-//   return new Response(JSON.stringify({ status: "ok" }), {
-//     headers: { "Content-Type": "application/json" },
-//   });
-// };
-
-// const siteURL = process.env.URL; // production site URL
-
-// const orgCSV = await fetch(`${siteURL}/data/organisations.csv`)
-//   .then(res => res.text());
-
-// const organisations = parseCSV(orgCSV);
-
 import Parser from "rss-parser";
 import RSS from "rss";
-import fs from "fs";
-import path from "path";
 
-export const config = {
-  schedule: "0 */1 * * *", // every 1 hours
-};
+export const config = { schedule: "0 */1 * * *" };
 
-export default async () => {
+export default async function handler() {
   const siteURL = process.env.URL;
+
   const parser = new Parser({
     headers: { "User-Agent": "Mozilla/5.0 (compatible; NetlifyRSS/1.0)" },
-    customFields: {
-      item: ["content:encoded"],
-    },
+    customFields: { item: ["content:encoded"] },
   });
 
-  // 1. Load organisations CSV
+  // Fetch CSV from public folder
   const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
     res.text()
   );
 
   const organisations = parseCSV(orgCSV);
 
-  // 2. Extract RSS URLs
   const rssSources = organisations
     .filter((org) => org["RSS Feed"])
-    .map((org) => ({
-      name: org["Organisation"],
-      rssUrl: org["RSS Feed"],
-    }));
+    .map((org) => ({ name: org["Organisation"], rssUrl: org["RSS Feed"] }));
 
-  // 3. Fetch & normalize RSS items
   const items = [];
 
   for (const source of rssSources) {
     try {
       const feed = await parser.parseURL(source.rssUrl);
-
       feed.items.forEach((item) => {
         items.push({
           title: item.title,
           link: item.link,
           date: item.isoDate || item.pubDate,
-          description: item.contentSnippet || item.content || "",
+          description:
+            item["content:encoded"] ||
+            item.contentSnippet ||
+            item.content ||
+            "",
           organisation: source.name,
         });
       });
@@ -70,13 +45,9 @@ export default async () => {
     }
   }
 
-  // Sort newest first
   items.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  // Optional limit
   const latestItems = items.slice(0, 100);
 
-  // 4. 👉 Generate RSS (THIS is where the rss library goes)
   const feed = new RSS({
     title: "Local Community Updates",
     description: "Updates from local community organisations",
@@ -97,6 +68,7 @@ export default async () => {
 
   const xml = feed.xml({ indent: true });
 
+  // ✅ Proper return format for Netlify Functions
   return {
     statusCode: 200,
     headers: {
@@ -105,7 +77,7 @@ export default async () => {
     },
     body: xml,
   };
-};
+}
 
 function parseCSV(text) {
   const rows = [];
@@ -150,65 +122,3 @@ function parseCSV(text) {
     return obj;
   });
 }
-
-// extract rss urls
-// const rssSources = organisations
-//   .filter(org =>
-//     org["RSS URL"] &&
-//     org["Operation Area"]?.trim().toLowerCase() !== "national"
-//   )
-//   .map(org => ({
-//     name: org["Organisation"],
-//     rssUrl: org["RSS URL"]
-//   }));
-
-// import Parser from "rss-parser";
-// const parser = new Parser();
-
-// const allItems = [];
-
-// for (const source of rssSources) {
-//   try {
-//     const feed = await parser.parseURL(source.rssUrl);
-
-//     feed.items.forEach(item => {
-//       allItems.push({
-//         title: item.title,
-//         link: item.link,
-//         date: item.isoDate || item.pubDate,
-//         organisation: source.name,
-//         source: source.rssUrl
-//       });
-//     });
-//   } catch (err) {
-//     console.warn(`Failed RSS: ${source.rssUrl}`, err.message);
-//   }
-// }
-
-// allItems.sort((a, b) => {
-//   return new Date(b.date) - new Date(a.date);
-// });
-
-// const unifiedFeed = allItems.slice(0, 100);
-
-// import RSS from "rss";
-
-// const feed = new RSS({
-//   title: "Local Community Updates",
-//   description: "Aggregated updates from local community organisations",
-//   feed_url: `${siteURL}/.netlify/functions/unifiedFeed`,
-//   site_url: siteURL,
-//   language: "en"
-// });
-
-// items.forEach(item => {
-//   feed.item({
-//     title: item.title,
-//     description: item.description || "",
-//     url: item.link,
-//     guid: item.link,
-//     date: item.date
-//   });
-// });
-
-// const xml = feed.xml({ indent: true });
