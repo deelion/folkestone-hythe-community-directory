@@ -1,6 +1,7 @@
 const loading = document.getElementById("loading");
 
-const FEED_URL = "/.netlify/functions/updateUnifiedFeed";
+const FEED_URL =
+  "https://folkestonehythecommunitydirectory.netlify.app/.netlify/functions/updateUnifiedFeed";
 
 fetch(FEED_URL)
   .then((res) => res.text())
@@ -8,7 +9,7 @@ fetch(FEED_URL)
     const parser = new DOMParser();
     const xml = parser.parseFromString(xmlText, "text/xml");
 
-    const items = Array.from(xml.getElementsByTagName("item")).slice(0, 5);
+    const items = Array.from(xml.getElementsByTagName("item")).slice(0, 1);
     const list = document.getElementById("feed");
 
     items.forEach((item) => {
