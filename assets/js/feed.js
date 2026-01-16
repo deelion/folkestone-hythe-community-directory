@@ -1,6 +1,5 @@
 const loading = document.getElementById("loading");
 
-// !! remove full path when tested
 const FEED_URL = "/.netlify/functions/updateUnifiedFeed";
 
 fetch(FEED_URL)
@@ -9,7 +8,7 @@ fetch(FEED_URL)
     const parser = new DOMParser();
     const xml = parser.parseFromString(xmlText, "text/xml");
 
-    const items = Array.from(xml.getElementsByTagName("item"));
+    const items = Array.from(xml.getElementsByTagName("item")).slice(0, 5);
     const list = document.getElementById("feed");
 
     items.forEach((item) => {
@@ -29,8 +28,6 @@ fetch(FEED_URL)
       `;
 
       list.appendChild(li);
-
-      loading.style.display = "none";
     });
   })
   .catch((err) => {
