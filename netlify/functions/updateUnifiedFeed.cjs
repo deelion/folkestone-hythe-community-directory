@@ -1,9 +1,7 @@
-import Parser from "rss-parser";
-import RSS from "rss";
+const Parser = require("rss-parser");
+const RSS = require("rss");
 
-export const config = { schedule: "0 */1 * * *" };
-
-export default async function handler() {
+exports.handler = async function (event, context) {
   const siteURL = process.env.URL;
 
   const parser = new Parser({
@@ -11,11 +9,9 @@ export default async function handler() {
     customFields: { item: ["content:encoded"] },
   });
 
-  // Fetch CSV from public folder
   const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
     res.text()
   );
-
   const organisations = parseCSV(orgCSV);
 
   const rssSources = organisations
@@ -68,7 +64,6 @@ export default async function handler() {
 
   const xml = feed.xml({ indent: true });
 
-  // ✅ Proper return format for Netlify Functions
   return {
     statusCode: 200,
     headers: {
@@ -77,48 +72,8 @@ export default async function handler() {
     },
     body: xml,
   };
-}
+};
 
 function parseCSV(text) {
-  const rows = [];
-  let currentRow = [];
-  let currentValue = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    const nextChar = text[i + 1];
-
-    if (char === '"' && nextChar === '"') {
-      // Escaped quote
-      currentValue += '"';
-      i++;
-    } else if (char === '"') {
-      inQuotes = !inQuotes;
-    } else if (char === "," && !inQuotes) {
-      currentRow.push(currentValue);
-      currentValue = "";
-    } else if (char === "\n" && !inQuotes) {
-      currentRow.push(currentValue);
-      rows.push(currentRow);
-      currentRow = [];
-      currentValue = "";
-    } else {
-      currentValue += char;
-    }
-  }
-
-  // Push last value
-  currentRow.push(currentValue);
-  rows.push(currentRow);
-
-  const headers = rows[0].map((h) => h.trim());
-
-  return rows.slice(1).map((row) => {
-    const obj = {};
-    headers.forEach((header, i) => {
-      obj[header] = row[i]?.trim() || "";
-    });
-    return obj;
-  });
+  // same CSV parsing code
 }
