@@ -27,7 +27,9 @@ exports.handler = async function (event, context) {
   for (const source of rssSources) {
     try {
       const feed = await parser.parseURL(source.rssUrl);
-      feed.items.forEach((item) => {
+      const feedItems = feed.items.slice(0, 5);
+
+      feedItems.forEach((item) => {
         items.push({
           title: item.title,
           link: item.link,
@@ -57,7 +59,7 @@ exports.handler = async function (event, context) {
   latestItems.forEach((item) => {
     feed.item({
       title: item.title,
-      description: item.description,
+      description: truncateText(stripImages(item.contentSnippet || "")),
       url: item.link,
       guid: item.link,
       date: item.date,
@@ -118,4 +120,13 @@ function parseCSV(text) {
     });
     return obj;
   });
+}
+
+function stripImages(html) {
+  return html.replace(/<img[^>]*>/g, "");
+}
+
+function truncateText(text, maxLength = 300) {
+  if (!text) return "";
+  return text.length > maxLength ? text.slice(0, maxLength) + "…" : text;
 }
