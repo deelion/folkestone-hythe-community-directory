@@ -1,3 +1,4 @@
+const { builder } = require("@netlify/functions");
 const Parser = require("rss-parser");
 const RSS = require("rss");
 
@@ -5,8 +6,9 @@ exports.config = {
   schedule: "0 */1 * * *", // every hour
 };
 
-exports.handler = async function (event, context) {
+exports.handler = builder(async function (event, context) {
   const siteURL = process.env.URL;
+  const path = "/community-feed.xml";
 
   const parser = new Parser({
     headers: { "User-Agent": "Mozilla/5.0 (compatible; NetlifyRSS/1.0)" },
@@ -52,7 +54,7 @@ exports.handler = async function (event, context) {
     title: "Local Community Updates",
     description: "Updates from local community organisations",
     site_url: siteURL,
-    feed_url: `${siteURL}/.netlify/functions/updateUnifiedFeed`,
+    feed_url: `${siteURL}/community-feed.xml`,
     language: "en",
   });
 
@@ -72,11 +74,12 @@ exports.handler = async function (event, context) {
     statusCode: 200,
     headers: {
       "Content-Type": "application/rss+xml",
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "public, max-age=0, must-revalidate",
     },
     body: xml,
+    path,
   };
-};
+});
 
 function parseCSV(text) {
   const rows = [];

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/deelion/folkestone-hythe-community-directory#readme",
   "dependencies": {
+    "@netlify/functions": "^5.1.2",
     "rss": "^1.2.2",
     "rss-parser": "^3.13.0"
   }
