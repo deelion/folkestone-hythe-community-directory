@@ -1,7 +1,6 @@
 const loading = document.getElementById("loading");
 
-const FEED_URL =
-  "https://folkestonehythecommunitydirectory.netlify.app/.netlify/functions/updateUnifiedFeed";
+const FEED_URL = "/.netlify/functions/updateUnifiedFeed";
 
 fetch(FEED_URL)
   .then((res) => res.text())
