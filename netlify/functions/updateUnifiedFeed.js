@@ -25,7 +25,9 @@ export const config = {
 
 export default async () => {
   const siteURL = process.env.URL;
-  const parser = new Parser();
+  const parser = new Parser({
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; NetlifyRSS/1.0)" },
+  });
 
   // 1. Load organisations CSV
   const orgCSV = await fetch(`${siteURL}/data/organisations.csv`).then((res) =>
