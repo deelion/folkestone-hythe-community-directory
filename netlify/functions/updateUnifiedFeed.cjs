@@ -1,6 +1,10 @@
 const Parser = require("rss-parser");
 const RSS = require("rss");
 
+exports.config = {
+  schedule: "0 */1 * * *", // every hour
+};
+
 exports.handler = async function (event, context) {
   const siteURL = process.env.URL;
 
