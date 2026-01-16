@@ -19,9 +19,9 @@
 import Parser from "rss-parser";
 import RSS from "rss";
 
-// export const config = {
-//   schedule: "0 */3 * * *", // every 3 hours
-// };
+export const config = {
+  schedule: "0 */1 * * *", // every 1 hours
+};
 
 export default async () => {
   const siteURL = process.env.URL;
