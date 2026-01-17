@@ -383,7 +383,9 @@ i {
   vertical-align: bottom;
   z-index: 0;
   cursor: pointer;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
 }
 
 .service-card h2 {
@@ -599,7 +601,9 @@ i {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
 }
 
 .orgs-card h2 {
@@ -912,4 +916,57 @@ index-filter .filter-panel {
   color: #fff;
   background-color: #1d1d1d;
   border-style: dashed;
+}
+
+/* community feed */
+#feed {
+  list-style-type: none;
+}
+
+#feed li {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+}
+
+.feed-item-header {
+  display: flex;
+  height: 40px;
+}
+
+.feed-item-header-left {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  vertical-align: center;
+  gap: 10px;
+}
+
+.feed-item-header-right {
+  line-height: 40px;
+  width: 20%;
+  color: #666;
+  text-align: right;
+}
+
+.feed-org-name {
+  line-height: 40px;
+}
+
+.feed-org-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1d1d1d;
+  overflow: hidden;
+  background: #e6e6e6;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.feed-org-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
