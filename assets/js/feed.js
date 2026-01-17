@@ -1,6 +1,7 @@
 const loading = document.getElementById("loading");
 
-const FEED_URL = "/.netlify/functions/updateUnifiedFeed";
+const FEED_URL =
+  "https://raw.githubusercontent.com/deelion/folkestone-hythe-community-feed/refs/heads/main/public/feed.xml?token=GHSAT0AAAAAADSIMP5JJWBBTCCJUHSLLZ762LL4E4A";
 
 fetch(FEED_URL)
   .then((res) => res.text())
