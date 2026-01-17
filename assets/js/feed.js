@@ -15,6 +15,7 @@ fetch(FEED_URL)
     items.forEach((item) => {
       const title = item.querySelector("title")?.textContent;
       const link = item.querySelector("link")?.textContent;
+      // const org = item.querySelector("organisation").textContent;
       const description = item.querySelector("description")?.textContent;
       const pubDate =
         item.querySelector("pubDate")?.textContent ||
@@ -23,7 +24,7 @@ fetch(FEED_URL)
 
       const li = document.createElement("li");
       li.innerHTML = `
-        <h3><a href="${link}">${title}</a></h3>
+        <h3><strong></strong><a href="${link}">${title}</a></h3>
         <small>${pubDate ? new Date(pubDate).toLocaleDateString() : ""}</small>
         <div>${description}</div>
       `;
