@@ -919,7 +919,12 @@ index-filter .filter-panel {
 }
 
 /* community feed */
+.feed-container {
+  max-width: 800px;
+}
+
 #feed {
+  padding: 0;
   list-style-type: none;
 }
 
