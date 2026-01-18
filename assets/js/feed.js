@@ -28,9 +28,7 @@ fetch(FEED_URL)
       <div class="feed-item-header-left">
       ${renderOrgAvatar(org)}
       <div class="feed-org-name">${org}</div>
-      </div>
-      <div class="feed-item-header-right">
-      <small>${pubDate ? new Date(pubDate).toLocaleDateString() : ""}</small>
+      <div class="feed-org-date"><small>${pubDate ? new Date(pubDate).toLocaleDateString() : ""}</small></div>
       </div>
       </div>
         <h2><a href="${link}">${title}</a></h2>

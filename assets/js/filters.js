@@ -6,31 +6,32 @@
 
 // main source of truth for use cases
 const useCasesDict = {
-  "meet-people": "meet new people", // 15
-  "get-outside": "get outside more", // 14
-  "save-money": "save money", // 13
-  "new-hobbies": "discover new hobbies", // 10
+  "meet-people": "meet new people", // 22
+  "free-activities": "find free activities", //22
+  "save-money": "save money", // 17
+  "get-outside": "get outside more", // 16
+  "new-hobbies": "discover new hobbies", // 14
   "reduce-waste": "help reduce waste", // 10
-  "free-activities": "find free activities", //10
-  "safe-space": "have a safe place to go", // 7
-  "locally-grown": "find locally grown food", // 4
-  "spend-local": "spend local", // 2
+  "free-food": "find free food", //9
+  "safe-space": "have a safe place to go", // 8
+  "locally-grown": "find locally grown food", // 5
+  "spend-local": "spend local", // 3
 };
 
-const USE_CASE_FILTERS = {
-  "save-money": {
-    label: "save money",
-  },
-  "reduce-waste": {
-    label: "help reduce waste",
-  },
-  "meet-people": {
-    label: "meet new people",
-  },
-  "free-activities": {
-    label: "find free activities",
-  },
-};
+// const USE_CASE_FILTERS = {
+//   "save-money": {
+//     label: "save money",
+//   },
+//   "reduce-waste": {
+//     label: "help reduce waste",
+//   },
+//   "meet-people": {
+//     label: "meet new people",
+//   },
+//   "free-activities": {
+//     label: "find free activities",
+//   },
+// };
 
 const FILTER_STORAGE_KEY = "activeFilters";
 
