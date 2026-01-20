@@ -6,10 +6,10 @@
 
 // main source of truth for use cases
 const useCasesDict = {
+  "free-activities": "find free activities", //27
   "meet-people": "meet new people", // 22
-  "free-activities": "find free activities", //22
+  "get-outside": "get outside more", // 20
   "save-money": "save money", // 17
-  "get-outside": "get outside more", // 16
   "new-hobbies": "discover new hobbies", // 14
   "reduce-waste": "help reduce waste", // 10
   "free-food": "find free food", //9
