@@ -86,6 +86,26 @@
           </button>
         </div>
       </div>
+
+      <!-- <div id="secondary-filters" class="secondary-filters"></div> -->
+      <div class="secondary-filter-wrapper">
+        <div class="secondary-filters-row">
+          <button
+            class="secondary-filter-toggle filter-pill filter-pill--toggle"
+            aria-expanded="false"
+            type="button"
+          >
+            <i class="fa-solid fa-filter"></i>
+            Filters
+          </button>
+
+          <div
+            id="secondary-filters"
+            class="secondary-filters secondary-filters--collapsed"
+          ></div>
+        </div>
+      </div>
+
       <div class="index-counts">
         <p>
           Explore <strong id="service-count">0</strong> local community services
@@ -95,11 +115,11 @@
       <div id="services" class="services-grid"></div>
     </div>
 
-    <script src="/assets/js/filters.js"></script>
-    <script src="/assets/js/filters-ui.js"></script>
-    <script src="/assets/js/counts.js"></script>
+    <!-- <script src="/assets/js/filters.js"></script> -->
+    <script type="module" src="/assets/js/filters-ui.js"></script>
+    <script type="module" src="/assets/js/counts.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
-    <script src="/assets/js/services.js"></script>
+    <script type="module" src="/assets/js/services.js"></script>
   </body>
 </html>

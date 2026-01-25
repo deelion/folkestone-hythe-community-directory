@@ -1,3 +1,5 @@
+import { filterServices } from "./filters.js";
+
 fetch("/data/services.csv")
   .then((res) => res.text())
   .then((text) => {
@@ -19,7 +21,7 @@ fetch("/data/services.csv")
       return obj;
     });
 
-    const filtered = filterServicesByUseCase(data);
+    const filtered = filterServices(data);
 
     filtered.sort((a, b) => {
       const nameA = a["Service"].toLowerCase();

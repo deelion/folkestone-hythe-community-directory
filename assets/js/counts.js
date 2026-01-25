@@ -1,3 +1,5 @@
+import { filterServices } from "./filters.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   updateHomepageCounts();
 });
@@ -11,7 +13,7 @@ function updateHomepageCounts() {
     const organisations = parseCSV(orgsText);
 
     // Apply existing filters
-    const filteredServices = filterServicesByUseCase(services);
+    const filteredServices = filterServices(services);
 
     // Count services
     const serviceCount = filteredServices.length;
