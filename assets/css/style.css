@@ -214,6 +214,9 @@ button {
   padding: 0.5rem 0.5rem;
   width: 35vw;
   max-width: 320px;
+  border: 1px solid #ddd;
+  color: #666;
+  background-color: #fff;
 }
 
 /* icons */
@@ -250,7 +253,7 @@ i {
 }
 
 .first-impression {
-  min-height: 100vh; /* full viewport height */
+  min-height: 96vh; /* full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,13 +261,14 @@ i {
   text-align: center;
   gap: 0.5rem;
   background-color: none;
-  padding: 2rem;
+  padding: 2vh;
   box-sizing: border-box;
 }
 
 /* Header */
 .landing-header {
   text-align: center;
+  margin: 5vh 0 10vh 0;
 }
 
 .index-logo {
@@ -290,19 +294,23 @@ i {
 }
 
 .index-note {
-  margin-top: 150px;
+  position: absolute;
+  bottom: 6vh;
+  width: 90%;
   font-size: 0.9rem;
   color: #777;
   max-height: 0px;
 }
 
 .actions-box {
+  position: absolute;
+  top: 3vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   background: none;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 0.4rem 1.5rem;
   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
   text-align: center;
 }
@@ -408,6 +416,7 @@ i {
 .grid-centre-text {
   height: 15rem;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 3px;
@@ -418,6 +427,19 @@ i {
 
 .grid-centre-text > * {
   margin: 0;
+}
+
+.age-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  margin-left: -0.3rem;
+  margin-bottom: 0.4rem;
+  border-radius: 999px;
+  background: #e5ecd6;
+  color: #657b35;
+  line-height: 1;
 }
 
 .grid-bottom-block {
@@ -782,19 +804,31 @@ i {
 }
 
 .ind-org-service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); */
   width: 90%;
   gap: 1rem;
 }
 
 .ind-org-service-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: none;
+  padding: 0rem;
+  /* border-radius: 8px; */
+  border-bottom: 1px solid #bbb;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); */
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.ind-org-service-title h2 {
+  margin-block-start: 0rem;
+  margin-block-end: 0.6rem;
+  line-height: 0.9rem;
+}
+
+.ind-org-service-title h2 a {
+  font-size: 18px;
 }
 
 @media (max-width: 600px) {
@@ -812,14 +846,19 @@ i {
   padding: 0.5rem;
 }
 
+.index-filter {
+  margin: 1vh 0rem;
+}
+
 index-filter .filter-panel {
   padding: 3rem;
   margin: 1rem 0;
 }
 
-.filter-panel h3 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.2rem;
+.filter-panel h4 {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
 }
 
 .filter-panel small {

@@ -45,6 +45,8 @@ function renderServices(services) {
 
     card.className = "service-card";
 
+    const ageLabel = formatAgePill(service["Min Age"], service["Max Age"]);
+
     card.innerHTML = `
       <div class="usecase-stickers" id="stickers-${index}"></div>
 
@@ -56,13 +58,14 @@ function renderServices(services) {
       </div>
 
       <div class="grid-centre-text">
-        <h2>
-          <span>
-            <a href="/service.html?service=${encodedService}">
-              ${service["Service"]}
-            </a>
-          </span>
-        </h2>
+      ${ageLabel ? `<span class="age-pill">${ageLabel}</span>` : ""}
+      <h2>
+        <span>
+          <a href="/service.html?service=${encodedService}">
+            ${service["Service"]}
+          </a>
+        </span>
+      </h2>
       </div>
 
       <div class="grid-bottom-block">
@@ -97,6 +100,17 @@ function renderServices(services) {
 }
 
 /* ---------- helpers ---------- */
+
+function formatAgePill(min, max) {
+  const minAge = min?.trim();
+  const maxAge = max?.trim();
+
+  if (!minAge && !maxAge) return null;
+
+  if (minAge && maxAge) return `Ages ${minAge}–${maxAge}`;
+  if (minAge) return `Ages ${minAge}+`;
+  if (maxAge) return `Ages under ${maxAge}`;
+}
 
 function renderUseCaseStickers(value, container, max = 3) {
   if (!value || !container) return;

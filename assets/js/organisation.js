@@ -303,13 +303,13 @@ function renderServices(services) {
           </span>
         </h2>
       </div>
-
-      <div class="ind-org-service-location">
-        <p class="label">
-          ${formatListSummary(service["Location(s)"])}
-        </p>
-      </div>
     `;
+
+    // <div class="ind-org-service-location">
+    //     <p class="label">
+    //       ${formatListSummary(service["Location(s)"])}
+    //     </p>
+    //   </div>
 
     container.appendChild(card);
   });
