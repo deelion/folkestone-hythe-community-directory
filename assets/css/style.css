@@ -268,7 +268,7 @@ i {
 /* Header */
 .landing-header {
   text-align: center;
-  margin: 5vh 0 10vh 0;
+  margin: 5vh 0 6vh 0;
 }
 
 .index-logo {
@@ -852,7 +852,7 @@ i {
 
 index-filter .filter-panel {
   padding: 3rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 .filter-panel h4 {
@@ -871,8 +871,8 @@ index-filter .filter-panel {
 .filter-buttons {
   display: flex;
   flex-wrap: nowrap;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   gap: 0.5rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -912,7 +912,7 @@ index-filter .filter-panel {
 }
 
 .filter-buttons button {
-  padding: 0.2rem 0.9rem;
+  padding: 0.2rem 0.7rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
