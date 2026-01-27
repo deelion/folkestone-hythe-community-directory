@@ -46,7 +46,7 @@ LOC044,Tin Tabernacle,,FALSE,Stade Street,Hythe,CT21 6BD,07775 795481,51.0700211
 LOC045,Folkestone Baptist Church,Folkestone Baptist Church,TRUE,Hill Road,Folkestone,CT19 6LY,,,
 LOC046,The Folkestone Bookshop,The Folkestone Bookshop,TRUE,70-72 Tontine Street,Folkestone,CT20 1JP,07830 116214,,
 LOC047,Capel Baptist Church,Folkestone Baptist Church,TRUE,63 Capel Street,Capel-le-Ferne,CT18 7LY,,51.10481016,1.210708002
-LOC048,D:NA,,,64 Tontine Street,Folkestone,CT20 1JP,,,
+LOC048,D:NA,D:NA,TRUE,64 Tontine Street,Folkestone,CT20 1JP,,,
 LOC049,The Cornerstone Centre,South Kent Community Church,TRUE,Castle Hill Avenue,Folkestone,CT20 2QR,,51.08211647,1.171225449
 LOC050,Docker Brewery & Taproom,Docker Brew Co Ltd,TRUE,"Unit C, 5 Acre Estate",Folkestone,CT19 5DS,,51.09499658,1.171420514
 LOC051,The Leas Bandstand,,TRUE,The Leas,Folkestone,,,,
@@ -59,3 +59,5 @@ LOC057,Saga,Saga,FALSE,Enbrook Park,Sandgate,CT20 3SE,,,
 LOC058,The Green Room,The Grand Hotel,FALSE,"The Grand, The Leas",Folkestone,CT20 2LR,,,
 LOC059,Etchinghill Village Hall,Etchinghill Village Hall,TRUE,St. Marys Drive,Etchinghill,CT18 8NQ,,,
 LOC060,Lyminge Library,Kent County Council,TRUE,7-9 Station Road,Lyminge,CT18 8HS,,,
+LOC061,The Lazy Shack,,TRUE,Range Road,Hythe,CT21 6HG,,,
+LOC 062,The Mariner,,TRUE,16 The Stade,Folkestone,CT19 6AB,,,
