@@ -107,7 +107,7 @@ function formatAgePill(min, max) {
 
   if (!minAge && !maxAge) return null;
 
-  if (minAge && maxAge) return `Ages ${minAge}–${maxAge}`;
+  if (minAge && maxAge) return `Ages ${minAge}-${maxAge}`;
   if (minAge) return `Ages ${minAge}+`;
   if (maxAge) return `Ages under ${maxAge}`;
 }
