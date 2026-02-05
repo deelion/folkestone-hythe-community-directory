@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btn.addEventListener("click", () => {
       updateFilter("useCases", [key]);
-      window.location.href = "/services.html";
+      window.location.href = "/services";
     });
 
     buttonsContainer.appendChild(btn);
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearBtn.addEventListener("click", (e) => {
       e.preventDefault();
       clearFilters();
-      window.location.href = "/services.html";
+      window.location.href = "/services";
     });
   }
 

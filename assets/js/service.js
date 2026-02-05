@@ -6,6 +6,9 @@ fetch("/data/services.csv")
   .then((text) => {
     const services = parseCSV(text);
     const service = services.find((s) => s["Service"] === serviceName);
+    if (service) {
+      document.title = `${service["Service"]} | Folke.world`;
+    }
     renderService(service);
   });
 
@@ -127,7 +130,7 @@ function formatLocationList(value) {
           ${locationIcon()}
           <span class="text-bit">${item}</span>
         </div>
-      `
+      `,
     )
     .join("");
 }
@@ -178,7 +181,7 @@ function renderOrganisationCards(value, container) {
     const encoded = encodeURIComponent(orgName);
 
     const card = document.createElement("a");
-    card.href = `/organisation.html?org=${encoded}`;
+    card.href = `/organisation/?org=${encoded}`;
     card.className = "srv-org-card";
     card.setAttribute("aria-label", orgName);
 
@@ -212,7 +215,7 @@ function formatOrganisationLinks(value) {
     .map((org) => {
       const name = org.trim();
       const encoded = encodeURIComponent(name);
-      return `<a href="/organisation.html?org=${encoded}">${name}</a>`;
+      return `<a href="/organisation/?org=${encoded}">${name}</a>`;
     })
     .join("<br />");
 }

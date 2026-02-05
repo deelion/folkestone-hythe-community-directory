@@ -32,7 +32,7 @@
       content="https://folkestonehythecommunitydirectory.netlify.app/assets/img/meta/goodneighbours-preview.jpg"
     />
 
-    <title>goodneighbours | Community Services</title>
+    <title>Folke.world | Community Services</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -56,68 +56,55 @@
     <style></style>
   </head>
   <body>
-    <!-- <nav class="main-nav">
-      <div class="nav-inner">
-        <a href="/" class="nav-logo">goodneighbours</a>
-
-        <button
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
-
-        <div class="nav-links">
-          <a href="/services.html" class="nav-link">Services</a>
-          <a href="/organisations.html" class="nav-link">Organisations</a>
-        </div>
-      </div>
-    </nav> -->
-
     <div id="site-nav"></div>
 
-    <div class="wider-container">
-      <h1>Community services</h1>
-      <div id="filter-panel" class="filter-panel">
-        <div class="filter-buttons">
-          <button class="filter-clear" id="clear-filters" type="button">
-            View all
-          </button>
+    <div class="page-wrapper">
+      <main>
+        <div class="wider-container">
+          <h1>Community services</h1>
+          <div id="filter-panel" class="filter-panel">
+            <div class="filter-buttons">
+              <button class="filter-clear" id="clear-filters" type="button">
+                View all
+              </button>
+            </div>
+          </div>
+
+          <!-- <div id="secondary-filters" class="secondary-filters"></div> -->
+          <div class="secondary-filter-wrapper">
+            <div class="secondary-filters-row">
+              <button
+                class="secondary-filter-toggle filter-pill filter-pill--toggle"
+                aria-expanded="false"
+                type="button"
+              >
+                <i class="fa-solid fa-filter"></i>
+                Filters
+              </button>
+
+              <div
+                id="secondary-filters"
+                class="secondary-filters secondary-filters--collapsed"
+              ></div>
+            </div>
+          </div>
+
+          <div class="index-counts">
+            <p>
+              Explore <strong id="service-count">0</strong> local community
+              services
+            </p>
+          </div>
+
+          <div id="services" class="services-grid"></div>
         </div>
-      </div>
-
-      <!-- <div id="secondary-filters" class="secondary-filters"></div> -->
-      <div class="secondary-filter-wrapper">
-        <div class="secondary-filters-row">
-          <button
-            class="secondary-filter-toggle filter-pill filter-pill--toggle"
-            aria-expanded="false"
-            type="button"
-          >
-            <i class="fa-solid fa-filter"></i>
-            Filters
-          </button>
-
-          <div
-            id="secondary-filters"
-            class="secondary-filters secondary-filters--collapsed"
-          ></div>
-        </div>
-      </div>
-
-      <div class="index-counts">
-        <p>
-          Explore <strong id="service-count">0</strong> local community services
-        </p>
-      </div>
-
-      <div id="services" class="services-grid"></div>
+      </main>
     </div>
 
     <!-- <script src="/assets/js/filters.js"></script> -->
     <script type="module" src="/assets/js/filters-ui.js"></script>
     <script type="module" src="/assets/js/counts.js"></script>
+    <script src="/assets/js/footer.js" defer></script>
     <script src="/assets/js/nav.js"></script>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <script type="module" src="/assets/js/services.js"></script>

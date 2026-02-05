@@ -8,6 +8,9 @@ fetch("/data/organisations.csv")
   .then((text) => {
     allOrganisations = parseCSV(text);
     const org = allOrganisations.find((o) => o["Organisation"] === orgName);
+    if (org) {
+      document.title = `${org["Organisation"]} | Folke.world`;
+    }
     renderOrganisation(org, allOrganisations);
   });
 
@@ -114,6 +117,40 @@ function renderOrganisation(org) {
   }
 }
 
+function renderServices(services) {
+  if (!services || services.length === 0) return;
+
+  const container = document.getElementById("services");
+
+  services.forEach((service, index) => {
+    const card = document.createElement("div");
+    const encodedService = encodeURIComponent(service["Service"]);
+    const avatarId = `avatars-${index}`;
+
+    card.className = "ind-org-service-card";
+
+    card.innerHTML = `
+      <div class="ind-org-service-title">
+        <h2>
+          <span>
+            <a href="/service/?service=${encodedService}">
+              ${service["Service"]}
+            </a>
+          </span>
+        </h2>
+      </div>
+    `;
+
+    // <div class="ind-org-service-location">
+    //     <p class="label">
+    //       ${formatListSummary(service["Location(s)"])}
+    //     </p>
+    //   </div>
+
+    container.appendChild(card);
+  });
+}
+
 /* ---------- helpers ---------- */
 
 function renderOrganisationCards(value, container) {
@@ -128,7 +165,7 @@ function renderOrganisationCards(value, container) {
     const encoded = encodeURIComponent(orgName);
 
     const card = document.createElement("a");
-    card.href = `/organisation.html?org=${encoded}`;
+    card.href = `/organisation/?org=${encoded}`;
     card.className = "srv-org-card";
     card.setAttribute("aria-label", orgName);
 
@@ -281,42 +318,6 @@ function websiteIcon() {
   `;
 }
 
-function renderServices(services) {
-  if (!services || services.length === 0) return;
-
-  const container = document.getElementById("services");
-
-  services.forEach((service, index) => {
-    const card = document.createElement("div");
-    const encodedService = encodeURIComponent(service["Service"]);
-    const avatarId = `avatars-${index}`;
-
-    card.className = "ind-org-service-card";
-
-    card.innerHTML = `
-      <div class="ind-org-service-title">
-        <h2>
-          <span>
-            <a href="/service.html?service=${encodedService}">
-              ${service["Service"]}
-            </a>
-          </span>
-        </h2>
-      </div>
-    `;
-
-    // <div class="ind-org-service-location">
-    //     <p class="label">
-    //       ${formatListSummary(service["Location(s)"])}
-    //     </p>
-    //   </div>
-
-    container.appendChild(card);
-  });
-}
-
-/* ---------- helpers ---------- */
-
 function renderUseCaseStickers(value, container, max = 3) {
   if (!value || !container) return;
 
@@ -389,7 +390,7 @@ function formatOrganisationLinks(value) {
     .map((org) => {
       const name = org.trim();
       const encoded = encodeURIComponent(name);
-      return `<a href="/organisation.html?org=${encoded}">${name}</a>`;
+      return `<a href="/organisation/?org=${encoded}">${name}</a>`;
     })
     .join("<br />");
 }
@@ -456,7 +457,7 @@ function formatOrgSummary(value) {
   const remaining = orgs.length - 1;
 
   let summary = `
-    <a href="/organisation.html?org=${encodeURIComponent(firstOrg)}">
+    <a href="/organisation/?org=${encodeURIComponent(firstOrg)}">
       ${firstOrg}
     </a>
   `;

@@ -2,14 +2,15 @@ function renderNav() {
   return `
     <nav class="main-nav">
       <div class="nav-inner">
-        <a href="/" class="nav-logo">goodneighbours</a>
+        <a href="/" class="nav-logo">Folke.world</a>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
           ☰
         </button>
         <div class="nav-links">
-          <a href="/services.html" class="nav-link">Services</a>
-          <a href="/organisations.html" class="nav-link">Organisations</a>
+          <a href="/services" class="nav-link">Services</a>
+          <a href="/organisations" class="nav-link">Organisations</a>
           <a href="/communityfeed.html" class="nav-link">Community Feed</a>
+          <a href="https://www.folke.world" class="nav-link">About</a>
         </div>
       </div>
     </nav>

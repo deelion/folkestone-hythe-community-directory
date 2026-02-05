@@ -41,11 +41,12 @@ function renderServices(services) {
     const card = document.createElement("div");
     const encodedService = encodeURIComponent(service["Service"]);
     const avatarId = `avatars-${index}`;
-    const serviceUrl = `/service.html?service=${encodedService}`;
+    const serviceUrl = `/service/?service=${encodedService}`;
 
     card.className = "service-card";
 
     const ageLabel = formatAgePill(service["Min Age"], service["Max Age"]);
+    const freeLabel = formatFreePill(service["Free"]);
 
     card.innerHTML = `
       <div class="usecase-stickers" id="stickers-${index}"></div>
@@ -58,10 +59,14 @@ function renderServices(services) {
       </div>
 
       <div class="grid-centre-text">
+      <div class="label-pills">
       ${ageLabel ? `<span class="age-pill">${ageLabel}</span>` : ""}
+      ${freeLabel ? `<span class="free-pill">${freeLabel}</span>` : ""}
+      </div>
+      
       <h2>
         <span>
-          <a href="/service.html?service=${encodedService}">
+          <a href="/service/?service=${encodedService}">
             ${service["Service"]}
           </a>
         </span>
@@ -110,6 +115,12 @@ function formatAgePill(min, max) {
   if (minAge && maxAge) return `Ages ${minAge}-${maxAge}`;
   if (minAge) return `Ages ${minAge}+`;
   if (maxAge) return `Ages under ${maxAge}`;
+}
+
+function formatFreePill(free) {
+  if (free == "FALSE") return null;
+
+  if (free == "TRUE") return `FREE`;
 }
 
 function renderUseCaseStickers(value, container, max = 3) {
@@ -184,7 +195,7 @@ function formatOrganisationLinks(value) {
     .map((org) => {
       const name = org.trim();
       const encoded = encodeURIComponent(name);
-      return `<a href="/organisation.html?org=${encoded}">${name}</a>`;
+      return `<a href="/organisation/?org=${encoded}">${name}</a>`;
     })
     .join("<br />");
 }
@@ -251,7 +262,7 @@ function formatOrgSummary(value) {
   const remaining = orgs.length - 1;
 
   let summary = `
-    <a href="/organisation.html?org=${encodeURIComponent(firstOrg)}">
+    <a href="/organisation/?org=${encodeURIComponent(firstOrg)}">
       ${firstOrg}
     </a>
   `;

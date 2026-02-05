@@ -32,7 +32,7 @@
       content="https://folkestonehythecommunitydirectory.netlify.app/assets/img/meta/goodneighbours-preview.jpg"
     />
 
-    <title>goodneighbours | Community Organisations</title>
+    <title>goodneighbours | Organisation</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -59,14 +59,20 @@
   <body>
     <div id="site-nav"></div>
 
-    <div class="wider-container">
-      <h1>Community organisations</h1>
-
-      <div id="organisations" class="orgs-grid"></div>
+    <div class="page-wrapper">
+      <main>
+        <div class="container">
+          <div id="org"></div>
+          <div id="disclaimer" class="disclaimer"></div>
+          <div id="ind-org-service-title"><h2>Services</h2></div>
+          <div id="services" class="ind-org-service-grid"></div>
+        </div>
+      </main>
     </div>
 
     <script src="/assets/js/nav.js"></script>
-    <script src="/assets/js/filters.js"></script>
-    <script src="/assets/js/organisations.js"></script>
+    <script src="/assets/js/organisation.js"></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/assets/js/disclaimer.js"></script>
   </body>
 </html>

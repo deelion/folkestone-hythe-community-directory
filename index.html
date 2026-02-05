@@ -32,7 +32,7 @@
       content="https://folkestonehythecommunitydirectory.netlify.app/assets/img/meta/goodneighbours-preview.jpg"
     />
 
-    <title>goodneighbours | Folkestone & Hythe Community Directory</title>
+    <title>folke.world | Folkestone & Hythe Community Directory</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -56,65 +56,76 @@
     <style></style>
   </head>
   <body>
-    <div class="index-container">
-      <div class="first-impression">
-        <!-- Actions box -->
-        <section class="actions-box">
-          <div class="main-buttons">
-            <a href="/organisations.html"
-              ><button class="atoz">Organisations A-Z</button></a
-            ><br /><br /><a href="/services.html"
-              ><button class="atoz">Services A-Z</button></a
-            >
-          </div>
-        </section>
+    <div class="page-wrapper">
+      <main>
+        <div class="index-container">
+          <div class="first-impression">
+            <!-- Actions box -->
+            <section class="actions-box">
+              <div class="main-buttons">
+                <a href="/organisations"
+                  ><button class="atoz">Organisations A-Z</button></a
+                ><br /><br /><a href="/services"
+                  ><button class="atoz">Services A-Z</button></a
+                >
+              </div>
+            </section>
 
-        <!-- Header -->
-        <header class="landing-header">
-          <h1 class="index-logo">goodneighbours</h1>
-          <p class="subtitle">Folkestone & Hythe</p>
+            <!-- Header -->
+            <header class="landing-header">
+              <h1 class="index-logo">Folke.world</h1>
+              <p class="subtitle">Community Directory</p>
 
-          <p class="tagline">
-            Find services and organisations in our community, run by our
-            neighbours.
-          </p>
-        </header>
+              <p class="tagline">
+                Find services and organisations in Folkestone & Hythe, run by
+                our neighbours.
+              </p>
+            </header>
 
-        <!-- <div class="index-counts">
+            <!-- <div class="index-counts">
           <p>
             <strong id="service-count">0</strong> services ·
             <strong id="organisation-count">0</strong> organisations
           </p>
         </div> -->
 
-        <div class="index-filter">
-          <div id="filter-panel" class="filter-panel">
-            <h4>What do you want to do?</h4>
-            <!-- <p>or find something specific, if you want to...</p> -->
-            <div class="filter-buttons"></div>
-            <button id="clear-filters" class="clear-btn">Clear filters</button>
+            <div class="index-filter">
+              <div id="filter-panel" class="filter-panel">
+                <h4>What do you want to do?</h4>
+                <!-- <p>or find something specific, if you want to...</p> -->
+                <div class="filter-buttons"></div>
+                <button id="clear-filters" class="clear-btn">
+                  Clear filters
+                </button>
+              </div>
+            </div>
+
+            <p class="index-note">
+              <b>Please note:</b> Collection of data is manual, and while every
+              effort is made to keep things updated, some information may be out
+              of date - please confirm with organisers before making plans.
+            </p>
           </div>
+
+          <!-- Why section -->
+          <section class="why-box">
+            <h2>What is Folke.world?</h2>
+            <p>
+              <b>Folke.world</b> is a space to capture how people in the
+              Folkestone & Hythe district are building community – something
+              ‘greater than the sum of its parts’ – to enable wellbeing,
+              resilience and ‘the good life’ for all that live here.
+            </p>
+
+            <p>
+              Visit the
+              <a href="blog.folke.world"><strong>Folke.world blog</strong></a>
+              to learn more about Folkestone & Hythe's community network and how
+              we can support it.
+            </p>
+          </section>
         </div>
-
-        <p class="index-note">
-          <b>Please note:</b> This site is currently run by one person,
-          gathering information from around the web from available sources -
-          please confirm with the organisations before making plans.
-        </p>
-      </div>
-
-      <!-- Why section -->
-      <section class="why-box">
-        <h2>What is this?</h2>
-        <p>
-          <b>goodneighbours</b> is an attempt to make it easier for Folkestone &
-          Hythe residents to find and engage with the incredible network of
-          community organisations across our district. Whether you're looking
-          for fun, free activities, an opportunity to volunteer, or are in need
-          of direct support for your needs, the goal is to make it all easier to
-          find right here.
-        </p>
-      </section>
+      </main>
     </div>
 
     <script>
@@ -123,6 +134,8 @@
     </script>
     <!-- <script type="module" src="/assets/js/filters.js"></script> -->
     <script type="module" src="/assets/js/filters-ui.js"></script>
-    <script src="/assets/js/counts.js"></script>
+    <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/disclaimer.js"></script>
+    <script src="/js/footer.js" defer></script>
   </body>
 </html>

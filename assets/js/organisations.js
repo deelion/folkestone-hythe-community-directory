@@ -27,7 +27,7 @@ Promise.all([
 
   // exclude national orgs
   organisations = organisations.filter(
-    (org) => org["Operation Area"]?.trim().toLowerCase() !== "national"
+    (org) => org["Operation Area"]?.trim().toLowerCase() !== "national",
   );
 
   const serviceCountMap = buildServiceCountMap(services);
@@ -126,17 +126,17 @@ function renderOrganisations(orgs, serviceCountMap) {
 
     const socialLinks =
       website || igLink || fbLink
-        ? `<div class="org-social-links">${website}${igLink}${fbLink}</div>`
+        ? `<div class="orgs-social-links">${website}${igLink}${fbLink}</div>`
         : "";
 
-    const orgUrl = `/organisation.html?org=${encodedName}`;
+    const orgUrl = `/organisation/?org=${encodedName}`;
 
     const card = document.createElement("div");
     card.className = "orgs-card";
 
     card.innerHTML = `       
       <h2>
-        <a class="name" href="/organisation.html?org=${encodedName}">
+        <a class="name" href="/organisation/?org=${encodedName}">
           ${org["Organisation"]}
         </a>
       </h2>
@@ -147,6 +147,7 @@ function renderOrganisations(orgs, serviceCountMap) {
           : ""
       }
 
+      <div class="orgs-linkbar">
       ${socialLinks}
 
       ${
@@ -156,6 +157,7 @@ function renderOrganisations(orgs, serviceCountMap) {
      </div>`
           : ""
       }
+      </div>
     `;
 
     container.appendChild(card);
