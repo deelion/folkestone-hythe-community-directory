@@ -10,7 +10,7 @@ function renderNav() {
           <a href="/services" class="nav-link">Services</a>
           <a href="/organisations" class="nav-link">Organisations</a>
           <a href="/communityfeed.html" class="nav-link">Community Feed</a>
-          <a href="https://www.folke.world" class="nav-link">About</a>
+          <a href="https://feedingfolkestone.wordpress.com/" class="nav-link">About</a>
         </div>
       </div>
     </nav>
