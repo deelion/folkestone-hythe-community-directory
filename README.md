@@ -2,6 +2,8 @@
 
 Creating a space to highlight the work and available services of local community groups, charities, community interest companies, and other community-focused businesses in the Folkestone & Hythe district.
 
+[View the Folkestone & Hythe Community Directory](https://folke.world)
+
 ### Goals
 
 - Create a reusable framework to simplify discovery of local community resources.
