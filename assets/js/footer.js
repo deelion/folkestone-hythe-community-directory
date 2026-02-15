@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>
         <b>
             <a
-              href="https://github.com/deelion/folkestone-hythe-community-directory"
+              href="https://github.com/deelion/goodneighbours"
               >Made with goodneighbours</a></b>, an open source community directory framework.
     </p>
   `;
