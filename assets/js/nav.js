@@ -11,7 +11,7 @@ function renderNav() {
           <a href="/organisations" class="nav-link">Organisations</a>
           <a href="/events" class="nav-link">Events Calendar</a>
           <a href="/communityfeed.html" class="nav-link">Community Feed</a>
-          <a href="https://feedingfolkestone.wordpress.com/" class="nav-link">About Folke.world</a>
+          <a href="https://feedingfolkestone.wordpress.com/about" class="nav-link">About Folke.world</a>
         </div>
       </div>
     </nav>

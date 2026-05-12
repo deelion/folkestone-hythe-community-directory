@@ -55,7 +55,7 @@
 
     <div class="container">
       <div id="events">
-        <iframe
+        <!-- <iframe
           src="https://calendar.google.com/calendar/embed?height=1000&amp;wkst=2&amp;ctz=Europe%2FLondon&amp;showPrint=0&amp;mode=AGENDA&amp;src=Zm9sa2Uud29ybGRAZ21haWwuY29t&amp;src=ZW4udWsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039be5&amp;color=%230b8043"
           frameborder="0"
           style="border: 0"
@@ -63,7 +63,30 @@
           height="750px"
           width="100%"
           sandbox="allow-scripts allow-same-origin allow-popups"
+        ></iframe> -->
+
+        <iframe
+          id="joynit-calendar-iframe"
+          width="100%"
+          height="900px"
+          src="https://app.joynit.io/embed/2c4jMB5mPD3N/community-calendar?w-mobile=100vw&language=en&logo-url=&hidden-footer=true&iframe-interactive-type=dynamic-event-new-tab&hidden-calendar-side-panel=true"
+          frameborder="0"
+          allowfullscreen
         ></iframe>
+        <iframe
+          id="joynit-calendar-iframe"
+          width="100%"
+          height="850px"
+          src="https://app.joynit.io/embed/2c4jMB5mPD3N/event-feed?w-mobile=100vw&language=en&logo-url=&hidden-footer=true&iframe-interactive-type=dynamic-event-new-tab&hidden-calendar-side-panel=true"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div id="joynit-calendar-integration-website">
+          <p style="font-size: 12px; color: #666; padding-bottom: 12px">
+            Shared calendar created on
+            <a href="https://app.joynit.io/community/2c4jMB5mPD3N">joynit</a>
+          </p>
+        </div>
       </div>
     </div>
 

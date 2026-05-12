@@ -219,7 +219,7 @@ button {
 
 .atoz {
   padding: 0.5rem 0.5rem;
-  width: 35vw;
+  width: 25vw;
   max-width: 320px;
   border: 1px solid #ddd;
   font-size: clamp(8px, 2.5vw, 14px);
