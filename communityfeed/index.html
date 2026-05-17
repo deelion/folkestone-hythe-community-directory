@@ -32,7 +32,7 @@
       content="https://folkestonehythecommunitydirectory.netlify.app/assets/img/meta/goodneighbours-preview.jpg"
     />
 
-    <title>Folke.world</title>
+    <title>Folke.world | Folkestone & Hythe Community Feed</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -58,12 +58,17 @@
   <body>
     <div id="site-nav"></div>
 
-    <div class="container">
-      <div id="about"></div>
+    <div class="wider-container">
+      <h1>Community Feed</h1>
+
+      <div class="feed-container">
+        <p id="loading">Loading community updates…</p>
+        <ul id="feed"></ul>
+      </div>
     </div>
 
-    <script src="/assets/js/filters.js"></script>
-    <script src="/assets/js/filters-ui.js"></script>
-    <script src="/assets/js/counts.js"></script>
+    <script src="/assets/js/feed.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/footer.js" defer></script>
   </body>
 </html>
