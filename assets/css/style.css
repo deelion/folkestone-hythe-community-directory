@@ -304,13 +304,13 @@ i {
 }
 
 .index-note {
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
-  bottom: 6vh;
-  width: 60%;
-  font-size: 0.9rem;
+  /* bottom: 6vh; */
+  width: 80%;
+  font-size: 0.7rem;
   color: #777;
-  max-height: 0px;
+  /* max-height: 0px; */
 }
 
 .disclaimer {
