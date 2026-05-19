@@ -47,6 +47,7 @@ function renderServices(services) {
 
     const ageLabel = formatAgePill(service["Min Age"], service["Max Age"]);
     const freeLabel = formatFreePill(service["Free"]);
+    const description = truncateString(service["Description"], 250);
 
     card.innerHTML = `
       <div class="usecase-stickers" id="stickers-${index}"></div>
@@ -59,6 +60,7 @@ function renderServices(services) {
       </div>
 
       <div class="grid-centre-text">
+      <div class="service-snippet">${description}</div>
       <div class="label-pills">
       ${ageLabel ? `<span class="age-pill">${ageLabel}</span>` : ""}
       ${freeLabel ? `<span class="free-pill">${freeLabel}</span>` : ""}
@@ -71,6 +73,7 @@ function renderServices(services) {
           </a>
         </span>
       </h2>
+      
       </div>
 
       <div class="grid-bottom-block">
@@ -105,6 +108,13 @@ function renderServices(services) {
 }
 
 /* ---------- helpers ---------- */
+
+function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + "...";
+}
 
 function formatAgePill(min, max) {
   const minAge = min?.trim();

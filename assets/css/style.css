@@ -298,7 +298,8 @@ i {
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  line-height: 140%;
   color: #555;
 }
 
@@ -403,10 +404,10 @@ i {
 
 .service-card {
   background: white;
-  border-radius: 1rem;
-  border-color: #a0bb64;
-  border-width: 0.25rem;
-  border-style: solid;
+  /* border-radius: 1rem; */
+  /* border-color: #a0bb64; */
+  /* border-width: 0.25rem; */
+  /* border-style: solid; */
   position: relative;
   height: 23.5rem;
   padding: 1.5rem;
@@ -422,6 +423,21 @@ i {
 .service-card h2 {
   line-height: 1;
   padding-right: 20px;
+}
+
+.service-snippet {
+  display: none;
+  padding-bottom: 10px;
+  font-size: 10px;
+  line-height: 100%;
+  width: 100%;
+}
+
+.org-service-desc {
+  padding-bottom: 10px;
+  font-size: 12px;
+  line-height: 120%;
+  width: 100%;
 }
 
 .label {
@@ -489,7 +505,7 @@ i {
 
 @media (max-width: 600px) {
   .service-grid {
-    width: 80%;
+    width: 95%;
   }
 }
 
@@ -658,7 +674,7 @@ i {
 .orgs-card {
   background: white;
   padding: 1rem;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition:
@@ -893,7 +909,8 @@ i {
 /* filters */
 
 /* Homepage-specific version inside .index-filter */
-.filter-panel {
+.filter-panel,
+.filter-panel-service {
   width: 100%;
   max-width: 1200px;
   padding: 0.5rem;
@@ -903,18 +920,16 @@ i {
   margin: 1vh 0rem;
 }
 
-index-filter .filter-panel {
-  padding: 3rem;
-  /* margin: 1rem 0; */
-}
-
-.filter-panel h4 {
+.filter-panel,
+.filter-panel-service h4 {
   color: #666;
   margin: 0 0 1rem 0;
   font-size: 1rem;
 }
 
-.filter-panel small {
+.filter-panel,
+.filter-panel-service small {
+  width: min(100%, 100vw);
   display: block;
   margin-bottom: 0.5rem;
   color: #666;
@@ -924,25 +939,35 @@ index-filter .filter-panel {
 .filter-buttons {
   display: flex;
   flex-wrap: nowrap;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /* width: min(100vw, 100%); */
+  padding-left: 0rem;
+  padding-right: 0rem;
   gap: 0.5rem;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   padding-bottom: 0.5rem;
   -webkit-overflow-scrolling: touch;
 }
 
 .filter-buttons::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+  height: 3px;
 }
 
-.filter-buttons {
-  scrollbar-width: none; /* Firefox */
+.filter-buttons::-webkit-scrollbar-track {
+  background: #e5e5e5;
 }
 
-.filter-buttons {
+.filter-buttons::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+}
+
+/* .filter-buttons {
+  scrollbar-width: none;
+} */
+
+/* .filter-buttons {
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -950,29 +975,77 @@ index-filter .filter-panel {
     black 95%,
     transparent
   );
+} */
+
+/* filters on services page */
+
+.filter-panel-service .filter-buttons button {
+  width: 6rem;
+  height: 9rem;
+  padding: 0.2rem 0.7rem;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 0px;
+  background: #fff;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 110%;
 }
 
-.index-filter .filter-buttons {
+.filter-panel-service .filter-buttons button i {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1.6rem;
+  margin-left: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .filter-buttons button {
+    /* width: 7rem;
+    height: 9rem; */
+  }
+
+  .filter-buttons button i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* filters on home page */
+
+.index-filter .filter-panel .filter-buttons {
   all: unset;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
-.index-filter .filter-buttons {
+.index-filter .filter-panel .filter-buttons {
   justify-content: center;
 }
 
-.filter-buttons button {
+.index-filter .filter-panel .filter-buttons button i {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.index-filter .filter-panel .filter-buttons button {
+  height: 4.5rem;
+  width: 9rem;
   padding: 0.2rem 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 0px;
   background: #fff;
   color: #666666;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-weight: 400;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 110%;
 }
 
 .filter-buttons button:hover {
@@ -988,10 +1061,10 @@ index-filter .filter-panel {
 }
 
 /* #clear-filters {
-  background-color: #666;
+  background-color: #a0bb64;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .clear-filters:hover {
@@ -1008,7 +1081,7 @@ index-filter .filter-panel {
   font-weight: 400;
   color: #fff;
   background-color: #1d1d1d;
-  border-style: dashed;
+  border: 2px solid #333;
 }
 
 /* community feed */

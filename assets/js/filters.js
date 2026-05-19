@@ -21,6 +21,19 @@ export const FILTER_DICTIONARIES = {
     "spend-local": "spend local", // 3
   },
 
+  useCaseIcons: {
+    "free-activities": "fa-solid fa-face-smile", //27
+    "meet-people": "fa-solid fa-people-arrows", // 22
+    "get-outside": "fa-solid fa-shoe-prints", // 20
+    "save-money": "fa-solid fa-coins", // 17
+    "new-hobbies": "fa-solid fa-person-walking", // 14
+    "reduce-waste": "fa-solid fa-recycle", // 10
+    "free-food": "fa-solid fa-utensils", //9
+    "safe-space": "fa-solid fa-person-shelter", // 8
+    "locally-grown": "fa-solid fa-seedling", // 5
+    "spend-local": "fa-solid fa-money-bill-1-wave", // 3
+  },
+
   professionalReferral: {
     label: "Professional referral",
     serviceField: "Referrals Only",

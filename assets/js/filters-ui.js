@@ -35,11 +35,42 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".filter-btn")
     .forEach((btn) => btn.remove());
 
+  // Object.entries(FILTER_DICTIONARIES.useCases).forEach(([key, label]) => {
+  //   const btn = document.createElement("button");
+  //   btn.className = "filter-btn";
+  //   btn.dataset.usecase = key;
+  //   btn.textContent = label;
+
+  //   // check if already active
+  //   const filters = getActiveFilters();
+  //   if (filters.useCases.includes(key)) btn.classList.add("active");
+
+  //   btn.addEventListener("click", () => {
+  //     updateFilter("useCases", [key]);
+  //     window.location.href = "/services";
+  //   });
+
+  //   buttonsContainer.appendChild(btn);
+  // });
+
   Object.entries(FILTER_DICTIONARIES.useCases).forEach(([key, label]) => {
     const btn = document.createElement("button");
     btn.className = "filter-btn";
     btn.dataset.usecase = key;
-    btn.textContent = label;
+
+    // Create icon element
+    const icon = document.createElement("i");
+    icon.className = FILTER_DICTIONARIES.useCaseIcons[key]; // e.g., "fas fa-chart-bar"
+    icon.style.display = "block"; // ensures icon is on its own line
+
+    // Create text element
+    const text = document.createElement("span");
+    text.textContent = label;
+    text.style.display = "block"; // ensures text is on its own line
+
+    // Append icon and text to button
+    btn.appendChild(icon);
+    btn.appendChild(text);
 
     // check if already active
     const filters = getActiveFilters();

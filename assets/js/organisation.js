@@ -125,6 +125,7 @@ function renderServices(services) {
   services.forEach((service, index) => {
     const card = document.createElement("div");
     const encodedService = encodeURIComponent(service["Service"]);
+    const descService = truncateString(service["Description"], 150);
     const avatarId = `avatars-${index}`;
 
     card.className = "ind-org-service-card";
@@ -138,6 +139,9 @@ function renderServices(services) {
             </a>
           </span>
         </h2>
+        <div class="org-service-desc">
+        ${descService}
+        </div>
       </div>
     `;
 
@@ -152,6 +156,21 @@ function renderServices(services) {
 }
 
 /* ---------- helpers ---------- */
+
+function truncateString(str, num) {
+  if (str.length <= num) return str;
+
+  // Slice the string up to the max length
+  let truncated = str.slice(0, num);
+
+  // Find the last space to avoid cutting mid-word
+  const lastSpace = truncated.lastIndexOf(" ");
+  if (lastSpace > 0) {
+    truncated = truncated.slice(0, lastSpace);
+  }
+
+  return truncated + "...";
+}
 
 function renderOrganisationCards(value, container) {
   if (!value || !container) return;
