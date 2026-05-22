@@ -227,6 +227,14 @@ button {
   background-color: #fff;
 }
 
+.additional-home-navigation {
+  padding-bottom: 20px;
+}
+
+.add-nav {
+  color: #657b35;
+}
+
 /* icons */
 
 i {
@@ -1370,4 +1378,119 @@ main {
   .events-container {
     width: 80%;
   }
+}
+
+@media (max-width: 600px) {
+  .calendar-mobile {
+    display: none;
+  }
+}
+
+/* search */
+
+.index-search {
+  width: 100%;
+}
+
+.directory-search {
+  /* max-width: 600px; */
+  width: 100%;
+}
+
+/* Hidden by default */
+#searchResults {
+  display: none; /* hidden when no results */
+  overflow-y: auto; /* scroll if content exceeds 31rem */
+  height: 31rem; /* fixed height when visible */
+  transition:
+    opacity 0.2s ease,
+    height 0.2s ease;
+}
+
+/* Visible state */
+#searchResults.active {
+  display: block; /* show container */
+  height: 31rem; /* fixed height */
+}
+
+.search-result {
+  height: 3.1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-result:hover {
+  background-color: #fff;
+  padding: 11px;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-type {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #777;
+  margin-bottom: 2px;
+}
+
+.result-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #657b35;
+  text-align: left;
+  line-height: 110%;
+}
+
+/* search font */
+
+/* Style the search input itself */
+#directorySearch {
+  font-family: "Poppins", sans-serif; /* replace with your site font */
+  font-size: 14px; /* match your site font size */
+  color: #333; /* input text color */
+  padding: 8px 10px; /* adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 100%; /* full width if needed */
+  box-sizing: border-box;
+}
+
+/* Placeholder styling */
+#directorySearch::placeholder {
+  font-family: inherit; /* matches input font */
+  font-size: inherit; /* matches input font size */
+  color: #999; /* nice gray for placeholder */
+  opacity: 1; /* ensure consistent visibility */
+}
+
+/* Cross-browser support */
+#directorySearch::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 1;
+  color: #999;
+}
+#directorySearch::-moz-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 1;
+  color: #999;
+}
+#directorySearch:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 1;
+  color: #999;
+}
+#directorySearch:-moz-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  opacity: 1;
+  color: #999;
+}
+
+/* Optional: change border color on focus for better UX */
+#directorySearch:focus {
+  border-color: #666;
 }

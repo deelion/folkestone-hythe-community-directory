@@ -91,6 +91,19 @@
           </p>
         </div> -->
 
+            <div class="index-search">
+              <div class="directory-search">
+                <input
+                  type="text"
+                  id="directorySearch"
+                  placeholder="Search organisations or services..."
+                  autocomplete="off"
+                />
+
+                <div id="searchResults"></div>
+              </div>
+            </div>
+
             <div class="index-filter">
               <div id="filter-panel" class="filter-panel">
                 <h4>What do you want to do?</h4>
@@ -107,6 +120,14 @@
               effort is made to keep information up-to-date, please confirm with
               organisers before making plans.
             </p>
+          </div>
+
+          <div class="additional-home-navigation">
+            <a href="/about"><span class="add-nav">About Folke.world</span></a>
+            |
+            <a href="/communityfeed"
+              ><span class="add-nav">Community Feed</span></a
+            >
           </div>
 
           <!-- Why section -->
@@ -140,6 +161,7 @@
     <script type="module" src="/assets/js/filters-ui.js"></script>
     <script src="/assets/js/footer.js"></script>
     <script src="/assets/js/disclaimer.js"></script>
-    <script src="/js/footer.js" defer></script>
+    <!-- <script src="/js/footer.js" defer></script> -->
+    <script src="assets/js/search.js" defer></script>
   </body>
 </html>
