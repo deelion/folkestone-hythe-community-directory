@@ -122,6 +122,11 @@ const searchInput = document.getElementById("directorySearch");
 const indexFilter = document.querySelector(".index-filter"); // your nav buttons container
 const searchResults = document.getElementById("searchResults");
 
+// search bar positioning mobile
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value;
   const results = searchDirectory(query);
@@ -136,6 +141,13 @@ searchInput.addEventListener("input", (e) => {
     indexFilter.style.display = ""; // show again (default)
     searchResults.style.display = "none";
   }
+
+  if (!isMobile()) return; // only for mobile
+
+  // Use setTimeout to wait until keyboard shows up
+  setTimeout(() => {
+    searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 300); // 300ms gives time for keyboard to appear
 });
 
 function renderSearchResults(results, query = "") {

@@ -935,6 +935,12 @@ i {
   font-size: 1rem;
 }
 
+.filter-panel h4 {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
 .filter-panel,
 .filter-panel-service small {
   width: min(100%, 100vw);
@@ -1399,6 +1405,7 @@ main {
 
 /* Hidden by default */
 #searchResults {
+  background-color: #fcfcfc;
   display: none; /* hidden when no results */
   overflow-y: auto; /* scroll if content exceeds 31rem */
   height: 31rem; /* fixed height when visible */
@@ -1410,7 +1417,7 @@ main {
 /* Visible state */
 #searchResults.active {
   display: block; /* show container */
-  height: 31rem; /* fixed height */
+  height: 18rem; /* fixed height */
 }
 
 .search-result {
@@ -1493,4 +1500,17 @@ main {
 /* Optional: change border color on focus for better UX */
 #directorySearch:focus {
   border-color: #666;
+}
+
+#searchResults::-webkit-scrollbar {
+  /* display: none; */
+  width: 3px;
+}
+
+#searchResults::-webkit-scrollbar-track {
+  background: #e5e5e5;
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
 }
