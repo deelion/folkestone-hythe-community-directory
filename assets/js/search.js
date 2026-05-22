@@ -147,7 +147,7 @@ searchInput.addEventListener("input", (e) => {
   // Use setTimeout to wait until keyboard shows up
   setTimeout(() => {
     searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 300); // 300ms gives time for keyboard to appear
+  }, 100); // 100ms gives time for keyboard to appear
 });
 
 function renderSearchResults(results, query = "") {

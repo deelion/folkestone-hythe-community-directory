@@ -1417,11 +1417,12 @@ main {
 /* Visible state */
 #searchResults.active {
   display: block; /* show container */
-  height: 18rem; /* fixed height */
+  height: 20.6rem; /* fixed height */
+  margin-bottom: 1rem;
 }
 
 .search-result {
-  height: 3.1rem;
+  min-height: 3.4rem;
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
